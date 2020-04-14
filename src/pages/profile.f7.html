@@ -1,0 +1,99 @@
+<template>
+  <div class="page" data-name="profile">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Profile</div>
+      </div>
+    </div>
+
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="/" class="tab-link">
+          <i class="icon icon-fill f7-icons if-not-md">house</i>
+          <i class="icon material-icons md-only">home</i>
+          <span class="tabbar-label">Home</span></a
+        >
+        <a href="#tab-profile-basic" class="tab-link tab-link-active">
+          <i class="icon icon-fill f7-icons if-not-md">person_crop_rectangle</i>
+          <i class="icon material-icons md-only">person</i>
+          <span class="tabbar-label">Basic</span></a
+        >
+        <a href="#tab-profile-address" class="tab-link">
+          <i class="icon icon-fill f7-icons if-not-md">map</i>
+          <i class="icon material-icons md-only">map</i>
+          <span class="tabbar-label">Address</span>
+        </a>
+        <a href="#tab-profile-employment" class="tab-link">
+          <i class="icon icon-fill f7-icons if-not-md">briefcase</i>
+          <i class="icon material-icons md-only">work</i>
+          <span class="tabbar-label">Employment</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="tabs-swipeable-wrap">
+      <div class="tabs">
+        <div id="tab-profile-basic" class="page-content tab tab-active">
+          <div class="block block-strong inset text-align-center">
+            <img src="static/img/pp.jpg" alt="profile" class="img-profile" />
+            <h2 class="block-title">
+              {{profileDetails.firstName}} {{profileDetails.lastName}}
+            </h2>
+            <a href="tel:{{profileDetails.phone}}">{{profileDetails.phone}}</a>
+          </div>
+        </div>
+        <div id="tab-profile-address" class="page-content tab">
+          <div class="block block-strong inset">
+            <h3>Address</h3>
+          </div>
+        </div>
+        <div id="tab-profile-employment" class="page-content tab">
+          <div class="block block-strong inset">
+            <h3>Employment details</h3>
+            <!-- <div class="list accordion-list">
+              <div class="accordion-item accordion-item-opened">
+                <div class="accordion-item-toggle">
+                  <h3>Employment details</h3>
+                </div>
+                <div class="accordion-item-content">
+                  Type: {{employmentDetails.type}}
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      const profileDetails = {
+        title: "Mr",
+        firstName: "Humayun",
+        lastName: "Kabir",
+        date_of_birth: new Date().toISOString,
+        phone: "+88342342343235",
+      };
+      const employmentDetails = {
+        type: "Full time",
+        name_of_companey: "Google",
+        position: "Software Engineer",
+        Phone: "+88011332534534",
+        gross_monthly_income: "$3428",
+        duration: "May, 2015 to April, 2019",
+      };
+
+      // Must return an object
+      return { profileDetails, employmentDetails };
+    },
+  };
+</script>

@@ -1,0 +1,101 @@
+<template>
+  <div class="page" data-name="login">
+    <div class="page-content login-screen-content">
+      <div class="login-screen-title">Login</div>
+      <div class="list">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Username</div>
+              <div class="item-input-wrap">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Your username"
+                  value="{{username}}"
+                  @input="updateUsername"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Password</div>
+              <div class="item-input-wrap">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Your password"
+                  value="{{password}}"
+                  @input="updatePassword"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+          <li>
+            <a
+              href="#"
+              class="item-link list-button login-button"
+              @click="login"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+        <div class="block-footer">
+          Some text about login information.<br />Click "Sign In" to close Login
+          Screen
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        user: {
+          firstName: "John",
+          lastName: "Doe",
+        },
+        // Login screen demo data
+        username: "humayunkabir",
+        password: "P@ssw0rd",
+      };
+    },
+    methods: {
+      helloWorld() {
+        this.$f7.dialog.alert("Hello World!", () => {
+          this.$f7.loginScreen.close();
+        });
+      },
+      updateUsername(e) {
+        this.username = e.target.value;
+        this.$update();
+      },
+      updatePassword(e) {
+        this.password = e.target.value;
+        this.$update();
+      },
+      login() {
+        if (!!this.username && !!this.password) {
+          console.log(
+            JSON.stringify(
+              { username: this.username, password: this.password },
+              null,
+              2
+            )
+          );
+          this.$f7.dialog.alert(`${this.username}, you are logged in!`);
+
+          this.$f7.views.main.router.navigate("/");
+        } else {
+          this.$f7.dialog.alert("Username or Password can't be empty!");
+        }
+      },
+    },
+  };
+</script>

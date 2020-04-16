@@ -1,5 +1,13 @@
 <template>
-  <div class="page" data-name="application">
+  <div
+    class="page"
+    data-name="application"
+    style="
+      background-image: url('../static/img/bg-2.jpg');
+      background-size: cover;
+      background-position: 35%;
+    "
+  >
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
@@ -15,11 +23,6 @@
 
     <div class="toolbar tabbar tabbar-labels toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="/" class="tab-link">
-          <i class="icon icon-fill f7-icons if-not-md">house</i>
-          <i class="icon material-icons md-only">home</i>
-          <span class="tabbar-label">Home</span></a
-        >
         <a
           href="#tab-application-basic"
           data-route-tab-id="tab-application-basic"
@@ -27,8 +30,8 @@
         >
           <i class="icon icon-fill f7-icons if-not-md">person_crop_rectangle</i>
           <i class="icon material-icons md-only">person</i>
-          <span class="tabbar-label">Basic</span></a
-        >
+          <span class="tabbar-label">Basic</span>
+        </a>
         <a
           href="#tab-application-address"
           data-route-tab-id="tab-application-address"
@@ -57,7 +60,9 @@
             <div class="block-title">Personal details</div>
             <div class="list no-hairlines-md">
               <ul>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -79,7 +84,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -98,7 +105,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -117,7 +126,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -138,7 +149,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -173,8 +186,125 @@
         </div>
         <div id="tab-application-address" class="page-content tab">
           <div class="block block-strong inset">
-            <h3>Address</h3>
-
+            <div class="block-title">Address</div>
+            <div class="list no-hairlines-md">
+              <ul>
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
+                  <!-- <div class="item-media">
+                    <i class="icon f7-icons if-not-md">placemark</i>
+                    <i class="icon material-icons if-md">place</i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Street no</div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="number"
+                        required
+                        validate
+                        placeholder="Street no"
+                        value="{{streetNo}}"
+                        @input="updateStreetNo"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
+                  <!-- <div class="item-media">
+                    <i class="icon f7-icons if-not-md">placemark</i>
+                    <i class="icon material-icons if-md">place</i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">
+                      Street name
+                    </div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="text"
+                        required
+                        validate
+                        placeholder="Street name"
+                        value="{{streetName}}"
+                        @input="updateStreetName"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
+                  <!-- <div class="item-media">
+                    <i class="icon f7-icons if-not-md">placemark</i>
+                    <i class="icon material-icons if-md">place</i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">City</div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="text"
+                        required
+                        validate
+                        placeholder="City"
+                        value="{{city}}"
+                        @input="updateCity"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
+                  <!-- <div class="item-media">
+                    <i class="icon f7-icons if-not-md">placemark</i>
+                    <i class="icon material-icons if-md">place</i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Province</div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="text"
+                        required
+                        validate
+                        placeholder="Province"
+                        value="{{province}}"
+                        @input="updateProvince"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
+                  <!-- <div class="item-media">
+                    <i class="icon f7-icons if-not-md">placemark</i>
+                    <i class="icon material-icons if-md">place</i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">
+                      Postal code
+                    </div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="text"
+                        required
+                        validate
+                        placeholder="Postal code"
+                        value="{{postalCode}}"
+                        @input="updatePostalCode"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="row">
               <button
                 class="col button button-fill button-round"
@@ -196,7 +326,9 @@
             <div class="block-title">Employment details</div>
             <div class="list no-hairlines-md">
               <ul>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">Work type</div>
                     <div class="item-input-wrap">
@@ -213,7 +345,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">
                       Name of company
@@ -231,7 +365,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">
                       Position
@@ -249,7 +385,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">
                       Phone (Work)
@@ -267,7 +405,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">
                       Gross monthly income
@@ -285,7 +425,9 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-content item-input item-input-with-info">
+                <li
+                  class="item-content item-input item-input-outline item-input-with-info"
+                >
                   <div class="item-inner">
                     <div class="item-title item-floating-label">Duration</div>
                     <div class="item-input-wrap">
@@ -357,6 +499,32 @@
 
       updatePhone({ target }) {
         this.phone = target.value;
+        this.$update();
+      },
+
+      // Address
+      updateStreetNo({ target }) {
+        this.streetNo = target.value;
+        this.$update();
+      },
+
+      updateStreetName({ target }) {
+        this.streetName = target.value;
+        this.$update();
+      },
+
+      updateCity({ target }) {
+        this.city = target.value;
+        this.$update();
+      },
+
+      updateProvince({ target }) {
+        this.province = target.value;
+        this.$update();
+      },
+
+      updatePostalCode({ target }) {
+        this.postalCode = target.value;
         this.$update();
       },
 

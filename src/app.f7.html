@@ -20,88 +20,114 @@
     </div> -->
 
     <!-- Left panel with cover effect-->
-    <div class="panel panel-left panel-cover theme-dark panel-init">
+    <div class="panel panel-left panel-cover panel-init">
       <div class="view">
         <div class="page">
           <div class="navbar">
             <div class="navbar-bg"></div>
             <div class="navbar-inner">
-              <div class="title">Left Panel</div>
+              <a href="/" class="link">
+                <img src="../static/img/snd-logo.png" alt="snd" width="40" />
+              </a>
             </div>
           </div>
-        </div>
 
-        <div class="page-content">
-          <div class="block">
-            <div class="list">
-              <ul>
-                <li>
-                  <a
-                    href="/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">Home</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/about/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">About</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/application/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">Application</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notification/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">Notification</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/form/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">Form</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/example/"
-                    class="item-content item-link panel-close"
-                    data-panel="left"
-                  >
-                    <div class="item-inner">
-                      <div class="item-title">Example</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+          <div class="page-content">
+            <div class="block">
+              <div class="list">
+                <ul>
+                  <li>
+                    <a
+                      href="/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-media">
+                        <i class="icon icon-fill f7-icons if-not-md">house</i>
+                        <i class="icon material-icons md-only">home</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Home</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-media">
+                        <i class="icon icon-fill f7-icons if-not-md">info</i>
+                        <i class="icon material-icons md-only">info</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">About</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/application/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-media">
+                        <i class="icon icon-fill f7-icons if-not-md"
+                          >doc_richtext</i
+                        >
+                        <i class="icon material-icons md-only">assignment</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Application</div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a
+                      href="/notification/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-media">
+                        <i class="icon icon-fill f7-icons if-not-md">
+                          bell
+                          <span class="badge color-red">5</span>
+                        </i>
+                        <i class="icon material-icons md-only">
+                          add_alert
+                          <span class="badge color-red">5</span>
+                        </i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Notification</div>
+                      </div>
+                    </a>
+                  </li> -->
+                  <!-- <li>
+                    <a
+                      href="/form/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-inner">
+                        <div class="item-title">Form</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/example/"
+                      class="item-content item-link panel-close"
+                      data-panel="left"
+                    >
+                      <div class="item-inner">
+                        <div class="item-title">Example</div>
+                      </div>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +135,7 @@
     </div>
 
     <!-- Right panel with reveal effect-->
-    <div class="panel panel-right panel-reveal theme-dark">
+    <div class="panel panel-right panel-reveal">
       <div class="view">
         <div class="page">
           <div class="navbar">
@@ -118,8 +144,11 @@
               <div class="title">Right Panel</div>
             </div>
           </div>
+
           <div class="page-content">
-            <div class="block">Right panel content goes here</div>
+            <div class="block">
+              Right panel content
+            </div>
           </div>
         </div>
       </div>
@@ -141,6 +170,7 @@
               </div>
             </div>
           </div>
+
           <div class="page-content">
             <div class="block">
               <p>Popup content goes here.</p>

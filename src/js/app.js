@@ -17,7 +17,7 @@ import App from "../app.f7.html";
 const f7Config = {
   root: "#app",
   component: App,
-  name: "f7 core demo",
+  name: "SND App",
   version: "0.0.1",
   theme: "auto", // Options: [ios, md, aurora or auto]
   routes: routes,

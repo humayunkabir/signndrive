@@ -12,9 +12,14 @@
   --f7-navbar-link-color: rgba(255, 255, 255, 0.9);
   --f7-navbar-text-color: rgba(255, 255, 255, 0.9);
 
-  // Input
-  --f7-input-outline-border-radius: 1.5rem;
+  // Block
+  --f7-block-inset-border-radius: 1rem;
 
+  // Input
+  // --f7-input-outline-border-radius: 1.5rem;
+  // --f7-input-outline-border-color: rgba(0, 0, 0, 0.1);
+
+  // List
   --f7-list-bg-color: transparent;
 }
 
@@ -23,11 +28,6 @@
 @import "profile";
 
 .block-strong {
-  background-color: transparent;
-}
-
-.list .item-input-wrap {
-  border-radius: 1.5rem;
-  background-color: white;
-  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: grayscale(0.25) blur(5px);
 }

@@ -5,7 +5,8 @@
     style="
       background-image: url('../static/img/bg-2.jpg');
       background-size: cover;
-      background-position: 35%;
+      background-position: 25%;
+      background-repeat: no-repeat;
     "
   >
     <div class="navbar">
@@ -60,23 +61,22 @@
             <div class="block-title">Personal details</div>
             <div class="list no-hairlines-md">
               <ul>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Title</div>
+                    <div class="item-title item-label">Title</div>
                     <div class="item-input-wrap">
                       <select
                         required
                         validate
-                        placeholder="Please choose..."
+                        name="title"
                         value="{{title}}"
-                        @input="updateTitle"
+                        @input="updateInput"
                       >
-                        <option value="Mr" selected>Mr</option>
+                        <option value="" selected>Choose</option>
+                        <option value="Mr">Mr</option>
                         <option value="Ms">Ms</option>
                         <option value="Mrs">Mrs</option>
                       </select>
@@ -84,51 +84,47 @@
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">First name</div>
+                    <div class="item-title item-label">First name</div>
                     <div class="item-input-wrap">
                       <input
                         type="text"
                         placeholder="First name"
                         required
                         validate
+                        name="firstName"
                         value="{{firstName}}"
-                        @input="updateFirstName"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Last name</div>
+                    <div class="item-title item-label">Last name</div>
                     <div class="item-input-wrap">
                       <input
                         type="text"
                         placeholder="Last name"
                         required
                         validate
+                        name="lastName"
                         value="{{lastName}}"
-                        @input="updateLastName"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
@@ -142,29 +138,49 @@
                         placeholder="Date of Birth"
                         required
                         validate
+                        name="dateOfBirth"
                         value="{{dateOfBirth}}"
-                        @input="updateDateOfBirth"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon demo-list-icon"></i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Phone</div>
+                    <div class="item-title item-label">Email</div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        required
+                        validate
+                        name="email"
+                        value="{{email}}"
+                        @input="updateInput"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input item-input-with-info">
+                  <!-- <div class="item-media">
+                    <i class="icon demo-list-icon"></i>
+                  </div> -->
+                  <div class="item-inner">
+                    <div class="item-title item-label">Phone</div>
                     <div class="item-input-wrap">
                       <input
                         type="tel"
                         placeholder="Phone"
                         required
                         validate
+                        name="phone"
                         value="{{phone}}"
-                        @input="updatePhone"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
@@ -189,37 +205,34 @@
             <div class="block-title">Address</div>
             <div class="list no-hairlines-md">
               <ul>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon f7-icons if-not-md">placemark</i>
                     <i class="icon material-icons if-md">place</i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Street no</div>
+                    <div class="item-title item-label">Street no</div>
                     <div class="item-input-wrap">
                       <input
                         type="number"
                         required
                         validate
                         placeholder="Street no"
+                        name="streetNo"
                         value="{{streetNo}}"
-                        @input="updateStreetNo"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon f7-icons if-not-md">placemark</i>
                     <i class="icon material-icons if-md">place</i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Street name
                     </div>
                     <div class="item-input-wrap">
@@ -228,66 +241,63 @@
                         required
                         validate
                         placeholder="Street name"
+                        name="streetName"
                         value="{{streetName}}"
-                        @input="updateStreetName"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon f7-icons if-not-md">placemark</i>
                     <i class="icon material-icons if-md">place</i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">City</div>
+                    <div class="item-title item-label">City</div>
                     <div class="item-input-wrap">
                       <input
                         type="text"
                         required
                         validate
                         placeholder="City"
+                        name="city"
                         value="{{city}}"
-                        @input="updateCity"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon f7-icons if-not-md">placemark</i>
                     <i class="icon material-icons if-md">place</i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Province</div>
+                    <div class="item-title item-label">Province</div>
                     <div class="item-input-wrap">
                       <input
                         type="text"
                         required
                         validate
                         placeholder="Province"
+                        name="province"
                         value="{{province}}"
-                        @input="updateProvince"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <!-- <div class="item-media">
                     <i class="icon f7-icons if-not-md">placemark</i>
                     <i class="icon material-icons if-md">place</i>
                   </div> -->
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Postal code
                     </div>
                     <div class="item-input-wrap">
@@ -296,8 +306,9 @@
                         required
                         validate
                         placeholder="Postal code"
+                        name="postalCode"
                         value="{{postalCode}}"
-                        @input="updatePostalCode"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
@@ -326,30 +337,28 @@
             <div class="block-title">Employment details</div>
             <div class="list no-hairlines-md">
               <ul>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Work type</div>
+                    <div class="item-title item-label">Work type</div>
                     <div class="item-input-wrap">
                       <select
                         required
                         validate
+                        name="workType"
                         value="{{workType}}"
-                        @input="updateWorkType"
+                        @input="updateInput"
                       >
-                        <option value="Full-time" selected>Full-time</option>
+                        <option value="">Choose</option>
+                        <option value="Full-time">Full-time</option>
                         <option value="Part-time">Part-time</option>
                       </select>
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Name of company
                     </div>
                     <div class="item-input-wrap">
@@ -358,18 +367,17 @@
                         placeholder="Name of company"
                         required
                         validate
+                        name="company"
                         value="{{company}}"
-                        @input="updateCompany"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Position
                     </div>
                     <div class="item-input-wrap">
@@ -378,18 +386,17 @@
                         placeholder="Position"
                         required
                         validate
+                        name="position"
                         value="{{position}}"
-                        @input="updatePosition"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Phone (Work)
                     </div>
                     <div class="item-input-wrap">
@@ -398,18 +405,17 @@
                         placeholder="Phone (Work)"
                         required
                         validate
+                        name="workPhone"
                         value="{{workPhone}}"
-                        @input="updateWorkPhone"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">
+                    <div class="item-title item-label">
                       Gross monthly income
                     </div>
                     <div class="item-input-wrap">
@@ -418,26 +424,27 @@
                         placeholder="Gross monthly income"
                         required
                         validate
+                        name="income"
                         value="{{income}}"
-                        @input="updateIncome"
+                        @input="updateInput"
                       />
                       <span class="input-clear-button"></span>
                     </div>
                   </div>
                 </li>
-                <li
-                  class="item-content item-input item-input-outline item-input-with-info"
-                >
+                <li class="item-content item-input item-input-with-info">
                   <div class="item-inner">
-                    <div class="item-title item-floating-label">Duration</div>
+                    <div class="item-title item-label">Duration</div>
                     <div class="item-input-wrap">
                       <select
                         required
                         validate
+                        name="duration"
                         value="{{duration}}"
-                        @input="updateDuration"
+                        @input="updateInput"
                       >
-                        <option value="1" selected>Less than 6 months</option>
+                        <option value="" selected>Choose</option>
+                        <option value="1">Less than 6 months</option>
                         <option value="2">6 months+</option>
                         <option value="3">2 years+</option>
                         <option value="4">5 years+</option>
@@ -470,92 +477,9 @@
 </template>
 <script>
   export default {
-    data() {
-      return {
-        title: "Mr",
-      };
-    },
     methods: {
-      // Personal details
-      updateTitle({ target }) {
-        this.title = target.value;
-        this.$update();
-      },
-
-      updateFirstName({ target }) {
-        this.firstName = target.value;
-        this.$update();
-      },
-
-      updateLastName({ target }) {
-        this.lastName = target.value;
-        this.$update();
-      },
-
-      updateDateOfBirth({ target }) {
-        this.dateOfBirth = target.value;
-        this.$update();
-      },
-
-      updatePhone({ target }) {
-        this.phone = target.value;
-        this.$update();
-      },
-
-      // Address
-      updateStreetNo({ target }) {
-        this.streetNo = target.value;
-        this.$update();
-      },
-
-      updateStreetName({ target }) {
-        this.streetName = target.value;
-        this.$update();
-      },
-
-      updateCity({ target }) {
-        this.city = target.value;
-        this.$update();
-      },
-
-      updateProvince({ target }) {
-        this.province = target.value;
-        this.$update();
-      },
-
-      updatePostalCode({ target }) {
-        this.postalCode = target.value;
-        this.$update();
-      },
-
-      // Employment details
-      updateWorkType({ target }) {
-        this.workType = target.value;
-        this.$update();
-      },
-
-      updateCompany({ target }) {
-        this.company = target.value;
-        this.$update();
-      },
-
-      updatePosition({ target }) {
-        this.position = target.value;
-        this.$update();
-      },
-
-      updateWorkPhone({ target }) {
-        this.workPhone = target.value;
-        this.$update();
-      },
-
-      updateIncome({ target }) {
-        this.income = target.value;
-        this.$update();
-      },
-
-      updateDuration({ target }) {
-        this.duration = target.value;
+      updateInput({ target: { name, value } }) {
+        this[name] = value;
         this.$update();
       },
 
@@ -579,12 +503,13 @@
         }
 
         if (isValid && !!message) {
-          this.$f7.dialog.alert(message);
+          this.$f7.dialog.alert(message, "Saved successfully!");
         }
       },
 
       goTo(path) {
         console.log({ path: `/application/${path}` });
+
         this.$f7.views.main.router.navigate(`/application/${path}`);
       },
     },

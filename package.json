@@ -36,7 +36,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js",
     "build-dev": "cross-env NODE_ENV=development node ./build/build.js",
     "build-prod": "cross-env NODE_ENV=production node ./build/build.js",
-    "postinstall": "cpy ./node_modules/framework7-icons/fonts/*.* ./src/fonts/"
+    "postinstall": "cpy ./node_modules/framework7-icons/fonts/*.* ./src/fonts/",
+    "deploy": "git subtree push --prefix release origin gh-pages"
   },
   "browserslist": [
     "Android >= 7",

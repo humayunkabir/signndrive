@@ -1,0 +1,386 @@
+<template>
+  <div class="page bg-img-2" data-name="signup">
+    <div class="page-content">
+      <div class="block block-strong inset">
+        <div class="login-screen-title">Sign up</div>
+        <div class="list no-hairlines-md">
+          <ul>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Title</div>
+                <div class="item-input-wrap">
+                  <select
+                    required
+                    validate
+                    name="title"
+                    value="{{title}}"
+                    @input="updateInput"
+                  >
+                    <option value="" selected>Choose</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mrs">Mrs</option>
+                  </select>
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">First name</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First name"
+                    value="{{firstName}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Last name</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last name"
+                    value="{{lastName}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li> -->
+            <li class="row">
+              <div class="item-content item-input col">
+                <div class="item-inner">
+                  <div class="item-title item-label">First name</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First name"
+                      value="{{firstName}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="item-content item-input col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Last name</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last name"
+                      value="{{lastName}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">
+                  Date of Birth
+                </div>
+                <div class="item-input-wrap">
+                  <input
+                    type="date"
+                    placeholder="Date of Birth"
+                    required
+                    validate
+                    name="dateOfBirth"
+                    value="{{dateOfBirth}}"
+                    @input="updateInput"
+                  />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Email</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value="{{email}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Phone</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    required
+                    validate
+                    name="phone"
+                    value="{{phone}}"
+                    @input="updateInput"
+                  />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Password</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value="{{password}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Confirm password</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    value="{{confirmPassword}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li> -->
+            <li class="row">
+              <div class="item-content item-input col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      value="{{password}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="item-content item-input col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Confirm password</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="Confirm"
+                      value="{{confirmPassword}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <label class="item-checkbox item-content">
+                <input
+                  type="checkbox"
+                  name="accept"
+                  value="Accept"
+                  @input="updateInput"
+                  required
+                  validate
+                />
+                <i class="icon icon-checkbox" style="margin-right: 0.5rem;"></i>
+                <div class="item-inner">
+                  <small>Accept terms and conditions</small>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="block-footer">
+          <button
+            class="button button-fill button-round"
+            @click="submit('title, firstName, lastName, dateOfBirth, email, phone, password, confirmPassword, accept', '/signin/', 'Registration Successfull! Sign in.')"
+          >
+            Sign up
+          </button>
+          <p>Already have an account? <a href="/signin/">Sing in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<!-- <template>
+  <div class="page bg-gradient-1-1-5" data-name="signup">
+    <div class="page-content">
+      <div class="block block-strong inset">
+        <div class="login-screen-title">Sign up</div>
+        <div class="list no-hairlines-md">
+          <ul>
+            <li class="row">
+              <div class="item-content item-input item-input-with-info col">
+                <div class="item-inner">
+                  <div class="item-title item-label">First name</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First name"
+                      value="{{firstName}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="item-content item-input item-input-with-info col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Last name</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last name"
+                      value="{{lastName}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-with-info">
+              <div class="item-inner">
+                <div class="item-title item-label">Email</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value="{{email}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-with-info">
+              <div class="item-inner">
+                <div class="item-title item-label">Username</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    value="{{username}}"
+                    @input="updateInput"
+                    required
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="row">
+              <div class="item-content item-input item-input-with-info col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      value="{{password}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="item-content item-input item-input-with-info col">
+                <div class="item-inner">
+                  <div class="item-title item-label">Confirm password</div>
+                  <div class="item-input-wrap">
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="Confirm"
+                      value="{{confirmPassword}}"
+                      @input="updateInput"
+                      required
+                      validate
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="text-align-left">
+              <label class="item-checkbox item-content">
+                <input
+                  type="checkbox"
+                  name="accept"
+                  value="Accept"
+                  @input="updateInput"
+                  required
+                  validate
+                />
+                <i class="icon icon-checkbox" style="margin-right: 0.5rem;"></i>
+                <div class="item-inner">
+                  <small>Accept terms and conditions</small>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="block-footer">
+          <button
+            class="button button-fill button-round"
+            @click="submit('firstName, lastName, email, username, password, confirmPassword, accept', '/login', 'Registration Successfull! Login.')"
+          >
+            Sign up
+          </button>
+          <p>Already have an account? <a href="/login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->
+<script>
+  import { updateInput, submit, goTo } from "../js/utils.js";
+  export default {
+    methods: { updateInput, submit, goTo },
+  };
+</script>

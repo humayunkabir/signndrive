@@ -2,10 +2,12 @@ import HomePage from "../pages/home.f7.html";
 import AboutPage from "../pages/about.f7.html";
 import FormPage from "../pages/form.f7.html";
 import ProfilePage from "../pages/profile.f7.html";
-import LoginPage from "../pages/login.f7.html";
+import SignInPage from "../pages/signin.f7.html";
+import SignUpPage from "../pages/signup.f7.html";
 import ExamplePage from "../pages/example.f7.html";
 import ApplicationPage from "../pages/application.f7.html";
 import NotificationPage from "../pages/notification.f7.html";
+import BrandPage from "../pages/brand.f7.html";
 
 import DynamicRoutePage from "../pages/dynamic-route.f7.html";
 import RequestAndLoad from "../pages/request-and-load.f7.html";
@@ -14,11 +16,19 @@ import NotFoundPage from "../pages/404.f7.html";
 var routes = [
   {
     path: "/",
+    component: BrandPage,
+  },
+  {
+    path: "/home/",
     component: HomePage,
   },
   {
-    path: "/login",
-    component: LoginPage,
+    path: "/signin/",
+    component: SignInPage,
+  },
+  {
+    path: "/signup/",
+    component: SignUpPage,
   },
   {
     path: "/about/",

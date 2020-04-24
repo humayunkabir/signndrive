@@ -190,7 +190,7 @@
               <div class="col-50"></div>
               <button
                 class="col-50 button button-fill button-round"
-                @click="submit('title, firstName, lastName, dateOfBirth, phone', 'tab-application-address', false)"
+                @click="submit('title, firstName, lastName, dateOfBirth, phone', '/application/tab-application-address/', false)"
               >
                 Next
               </button>
@@ -316,13 +316,13 @@
             <div class="row">
               <button
                 class="col button button-fill button-round"
-                @click="goTo('/')"
+                @click="goTo('/application/')"
               >
                 Prev
               </button>
               <button
                 class="col button button-fill button-round"
-                @click="submit('streetNo, streetName, city, province, postalCode', 'tab-application-employment', false)"
+                @click="submit('streetNo, streetName, city, province, postalCode', '/application/tab-application-employment/', false)"
               >
                 Next
               </button>
@@ -332,6 +332,35 @@
         <div id="tab-application-employment" class="page-content tab">
           <div class="block block-strong inset">
             <div class="block-title">Employment details</div>
+
+            <div class="block-title">Are you employed?</div>
+            <div
+              class="display-flex margin-top-half padding-right padding-left"
+            >
+              <label class="radio display-flex">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="yes"
+                  @input="updateInput"
+                  checked
+                />
+                <i class="icon icon-radio"></i>
+                <div style="padding-left: 0.25rem;">Yes</div>
+              </label>
+              <label class="radio display-flex margin-left">
+                <input
+                  type="radio"
+                  name="employment"
+                  value="no"
+                  @input="updateInput"
+                />
+                <i class="icon icon-radio"></i>
+                <div style="padding-left: 0.25rem;">No</div>
+              </label>
+            </div>
+
+            <!-- If Yes -->
             <div class="list no-hairlines-md">
               <ul>
                 <li class="item-content item-input item-input-with-info">
@@ -452,16 +481,94 @@
                 </li>
               </ul>
             </div>
+
+            <!-- If No -->
+            <div class="list no-hairlines-md">
+              <ul>
+                <li class="item-content item-input item-input-with-info">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Current status</div>
+                    <div class="item-input-wrap">
+                      <select
+                        required
+                        validate
+                        name="currentStatus"
+                        value="{{currentStatus}}"
+                        @input="updateInput"
+                      >
+                        <option value="">Choose</option>
+                        <option value="N/A">N/A</option>
+                        <option value="Student">Student</option>
+                        <option value="ODSP">ODSP</option>
+                        <option value="Retired">Retired</option>
+                        <option value="Spousal Support">Spousal Support</option>
+                        <option value="Welfare">Welfare</option>
+                        <option value="Uber / Skip Dishes"
+                          >Uber / Skip Dishes</option
+                        >
+                        <option value="Maternity">Maternity</option>
+                        <option value="Maternity Leave">Maternity Leave</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="item-content item-input item-input-with-info">
+                  <div class="item-inner">
+                    <div class="item-title item-label">
+                      Total monthly income
+                    </div>
+                    <div class="item-input-wrap">
+                      <input
+                        type="number"
+                        placeholder="Total monthly income"
+                        required
+                        validate
+                        name="income"
+                        value="{{income}}"
+                        @input="updateInput"
+                      />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input item-input-with-info">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Duration</div>
+                    <div class="item-input-wrap">
+                      <select
+                        required
+                        validate
+                        name="duration"
+                        value="{{duration}}"
+                        @input="updateInput"
+                      >
+                        <option value="" selected>Choose</option>
+                        <option value="1">Less than 3 months</option>
+                        <option value="2">1 year+</option>
+                        <option value="3">2 years+</option>
+                        <option value="4">3 years+</option>
+                        <option value="5">4 years+</option>
+                        <option value="6">5 years+</option>
+                      </select>
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="row">
               <button
                 class="col button button-fill button-round"
-                @click="goTo('tab-application-address')"
+                @click="goTo('/application/tab-application-address/')"
               >
                 Prev
               </button>
               <button
                 class="col button button-fill button-round"
-                @click="submit('workType, company, position, workPhone, income, duration', '/', 'Thank you!')"
+                @click="submit('workType, company, position, workPhone, income, duration', '/application/', 'Thank you!')"
               >
                 Done
               </button>
@@ -473,42 +580,12 @@
   </div>
 </template>
 <script>
+  import { updateInput, submit, goTo } from "../js/utils.js";
   export default {
     methods: {
-      updateInput({ target: { name, value } }) {
-        this[name] = value;
-        this.$update();
-      },
-
-      submit(dataKeys, path = "/", message) {
-        if (!dataKeys) return;
-        const keys = dataKeys.split(",").map((key) => key.trim());
-
-        const data = {};
-        keys.forEach((key) => {
-          data[key] = this[key];
-        });
-
-        const isValid = !Object.values(data)
-          .map((value) => !!value)
-          .includes(false);
-
-        if (isValid) {
-          // Save data to Database
-          console.log(data);
-          this.goTo(path);
-        }
-
-        if (isValid && !!message) {
-          this.$f7.dialog.alert(message, "Saved successfully!");
-        }
-      },
-
-      goTo(path) {
-        console.log({ path: `/application/${path}` });
-
-        this.$f7.views.main.router.navigate(`/application/${path}`);
-      },
+      updateInput,
+      submit,
+      goTo,
     },
   };
 </script>

@@ -1,0 +1,57 @@
+<template>
+  <div class="page bg-circle-shape-primary" data-name="signin">
+    <div class="page-content display-flex align-items-center">
+      <div class="block block-strong inset flex-grow-1">
+        <div class="login-screen-title">Sign in</div>
+        <div class="list no-hairlines-md">
+          <ul>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Email</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value="{{email}}"
+                    @input="updateInput"
+                    validate
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Password</div>
+                <div class="item-input-wrap">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value="{{password}}"
+                    @input="updateInput"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="block-footer">
+          <button
+            class="button button-fill button-round"
+            @click="submit('email, password', '/home/', 'Signed in!')"
+          >
+            Sign in
+          </button>
+          <p>Don't have an account? <a href="/signup/">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import { updateInput, submit, goTo } from "../js/utils.js";
+  export default {
+    methods: { updateInput, submit, goTo },
+  };
+</script>

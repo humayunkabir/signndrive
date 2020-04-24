@@ -1,0 +1,30 @@
+<template>
+  <div class="page bg-gradient-1-1-5" data-name="brand">
+    <div class="page-content">
+      <div class="block m-0">
+        <div class="display-flex flex-center vh-100">
+          <a class="text-align-center" href="/home">
+            <img src="./static/img/snd-logo.png" alt="snd" width="70" />
+            <div class="blok-title color-primary font-weight-black">
+              SND App
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  // import { goTo } from "../js/utils.js";
+  export default {
+    mounted() {
+      let isLoggedIn = false;
+      let path = "/signin/";
+      if (isLoggedIn) path = "/application/";
+
+      setTimeout(() => {
+        this.$f7.views.main.router.navigate(path);
+      }, 1000);
+    },
+  };
+</script>

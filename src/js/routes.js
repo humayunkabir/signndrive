@@ -56,15 +56,15 @@ var routes = [
     tabs: [
       {
         path: "/",
-        id: "tab-application-basic",
-      },
-      {
-        path: "/tab-application-address",
         id: "tab-application-address",
       },
       {
         path: "/tab-application-employment",
         id: "tab-application-employment",
+      },
+      {
+        path: "/tab-application-question-answer",
+        id: "tab-application-question-answer",
       },
     ],
   },

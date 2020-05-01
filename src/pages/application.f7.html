@@ -393,7 +393,7 @@
               </button>
               <button
                 class="col button button-fill button-round"
-                @click="submit('workType, company, position, workPhone, income, duration', '/questions/tab-application-question-answer', 'Thank you!')"
+                @click="submit('workType, company, position, workPhone, income, duration', '/questions/tab-application-question-answer/', 'Thank you!')"
               >
                 Next
               </button>
@@ -413,106 +413,100 @@
               <div class="swiper-pagination"></div>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="row">
-                    <h2 class="col">
-                      What kind of vehicle are you looking to finance?
-                    </h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="vehicleType"
-                        value="Car"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner">
-                        <img
-                          src="../static/img/vehicles/car.png"
-                          alt="Car"
-                          width="100%"
-                          height="50"
+                  <div class="swiper-slide-content">
+                    <div class="row">
+                      <h3 class="col">
+                        What kind of vehicle are you looking to finance?
+                      </h3>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50 text-align-center"
+                        style="height: 90px;"
+                      >
+                        <input
+                          type="radio"
+                          name="vehicleType"
+                          value="Car"
+                          @input="updateInput"
                         />
-                        <div
-                          class="font-weight-black text-color-deeporange text-align-center"
-                        >
-                          Car
+                        <div class="item-inner">
+                          <img
+                            src="../static/img/vehicles/car.png"
+                            alt="Car"
+                            width="auto"
+                            height="35"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Car
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="vehicleType"
-                        value="Van"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner">
-                        <img
-                          src="../static/img/vehicles/suv.png"
-                          alt="Suv"
-                          width="100%"
-                          height="50"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50 text-align-center"
+                        style="height: 90px;"
+                      >
+                        <input
+                          type="radio"
+                          name="vehicleType"
+                          value="Van"
+                          @input="updateInput"
                         />
-                        <div
-                          class="font-weight-black text-color-deeporange text-align-center"
-                        >
-                          Suv
+                        <div class="item-inner">
+                          <img
+                            src="../static/img/vehicles/suv.png"
+                            alt="Suv"
+                            width="auto"
+                            height="35"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Suv
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="vehicleType"
-                        value="Suv"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner">
-                        <img
-                          src="../static/img/vehicles/van.png"
-                          alt="Van"
-                          width="100%"
-                          height="50"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50 text-align-center"
+                        style="height: 90px;"
+                      >
+                        <input
+                          type="radio"
+                          name="vehicleType"
+                          value="Suv"
+                          @input="updateInput"
                         />
-                        <div
-                          class="font-weight-black text-color-deeporange text-align-center"
-                        >
-                          Van
+                        <div class="item-inner">
+                          <img
+                            src="../static/img/vehicles/van.png"
+                            alt="Van"
+                            width="auto"
+                            height="35"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Van
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="vehicleType"
-                        value="Truck"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner">
-                        <img
-                          src="../static/img/vehicles/truck.png"
-                          alt="Truck"
-                          width="100%"
-                          height="50"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50 text-align-center"
+                        style="height: 90px;"
+                      >
+                        <input
+                          type="radio"
+                          name="vehicleType"
+                          value="Truck"
+                          @input="updateInput"
                         />
-                        <div
-                          class="font-weight-black text-color-deeporange text-align-center"
-                        >
-                          Truck
+                        <div class="item-inner">
+                          <img
+                            src="../static/img/vehicles/truck.png"
+                            alt="Truck"
+                            width="auto"
+                            height="35"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Truck
+                          </div>
                         </div>
-                      </div>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-50"></div>
@@ -525,99 +519,101 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="list media-list no-hairlines-md padding-top">
-                    <ul>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="serviceType"
-                            value="First Time Purchase"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              First Time Purchase
+                  <div class="swiper-slide-content">
+                    <div class="list media-list no-hairlines-md padding-top">
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="serviceType"
+                              value="First Time Purchase"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                First Time Purchase
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="serviceType"
-                            value="Refinance My Auto"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Refinance My Auto
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="serviceType"
+                              value="Refinance My Auto"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Refinance My Auto
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="serviceType"
-                            value="Additional Auto"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Additional Auto
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="serviceType"
+                              value="Additional Auto"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Additional Auto
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="serviceType"
-                            value="Upgrade My Vehicle"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Upgrade My Vehicle
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="serviceType"
+                              value="Upgrade My Vehicle"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Upgrade My Vehicle
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="serviceType"
-                            value="Lower My Interest"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Lower My Interest
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="serviceType"
+                              value="Lower My Interest"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Lower My Interest
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -636,46 +632,48 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="list media-list no-hairlines-md">
-                    <h2>Any previous repossession?</h2>
-                    <ul>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="previousRepossession"
-                            value="Yes"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Yes
+                  <div class="swiper-slide-content">
+                    <div class="list media-list no-hairlines-md">
+                      <h3>Any previous repossession?</h3>
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="previousRepossession"
+                              value="Yes"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Yes
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="previousRepossession"
-                            value="No"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              No
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="previousRepossession"
+                              value="No"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                No
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -694,46 +692,48 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="list media-list no-hairlines-md">
-                    <h2>Do you have any collections?</h2>
-                    <ul>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="collections"
-                            value="Yes"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Yes, I have collections
+                  <div class="swiper-slide-content">
+                    <div class="list media-list no-hairlines-md">
+                      <h3>Do you have any collections?</h3>
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="collections"
+                              value="Yes"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Yes, I have collections
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="collections"
-                            value="No"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              I don't have any collections
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="collections"
+                              value="No"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                I don't have any collections
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -752,96 +752,98 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="row">
-                    <h2 class="col">Rate your credit:</h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="creditRate"
-                        value="Very Poor (300-500)"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <img
-                          src="../static/img/emojis/poor.svg"
-                          alt="Poor"
-                          width="40"
-                          height="40"
+                  <div class="swiper-slide-content">
+                    <div class="row">
+                      <h3 class="col">Rate your credit:</h3>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                        style="height: 120px;"
+                      >
+                        <input
+                          type="radio"
+                          name="creditRate"
+                          value="Very Poor (300-500)"
+                          @input="updateInput"
                         />
-                        <div class="font-weight-black text-color-deeporange">
-                          Very Poor<br />(300-500)
+                        <div class="item-inner text-align-center">
+                          <img
+                            src="../static/img/emojis/poor.svg"
+                            alt="Poor"
+                            width="40"
+                            height="40"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Very Poor<br />(300-500)
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="creditRate"
-                        value="Average (500-600)"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <img
-                          src="../static/img/emojis/average.svg"
-                          alt="Average"
-                          width="40"
-                          height="40"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                        style="height: 120px;"
+                      >
+                        <input
+                          type="radio"
+                          name="creditRate"
+                          value="Average (500-600)"
+                          @input="updateInput"
                         />
-                        <div class="font-weight-black text-color-deeporange">
-                          Average<br />(500-600)
+                        <div class="item-inner text-align-center">
+                          <img
+                            src="../static/img/emojis/average.svg"
+                            alt="Average"
+                            width="40"
+                            height="40"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Average<br />(500-600)
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="creditRate"
-                        value="Good (600-700)"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <img
-                          src="../static/img/emojis/good.svg"
-                          alt="Good"
-                          width="40"
-                          height="40"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                        style="height: 120px;"
+                      >
+                        <input
+                          type="radio"
+                          name="creditRate"
+                          value="Good (600-700)"
+                          @input="updateInput"
                         />
-                        <div class="font-weight-black text-color-deeporange">
-                          Good<br />(600-700)
+                        <div class="item-inner text-align-center">
+                          <img
+                            src="../static/img/emojis/good.svg"
+                            alt="Good"
+                            width="40"
+                            height="40"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Good<br />(600-700)
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                      style="height: 120px;"
-                    >
-                      <input
-                        type="radio"
-                        name="creditRate"
-                        value="Great (700+)"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <img
-                          src="../static/img/emojis/great.svg"
-                          alt="Great"
-                          width="40"
-                          height="40"
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                        style="height: 120px;"
+                      >
+                        <input
+                          type="radio"
+                          name="creditRate"
+                          value="Great (700+)"
+                          @input="updateInput"
                         />
-                        <div class="font-weight-black text-color-deeporange">
-                          Great<br />(700+)
+                        <div class="item-inner text-align-center">
+                          <img
+                            src="../static/img/emojis/great.svg"
+                            alt="Great"
+                            width="40"
+                            height="40"
+                          />
+                          <div class="font-weight-black text-color-deeporange">
+                            Great<br />(700+)
+                          </div>
                         </div>
-                      </div>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -860,46 +862,48 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="list media-list no-hairlines-md">
-                    <h2>Can you drive Manual Transmission?</h2>
-                    <ul>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="manualTransmission"
-                            value="Yes"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Yes, I can drive
+                  <div class="swiper-slide-content">
+                    <div class="list media-list no-hairlines-md">
+                      <h3>Can you drive Manual Transmission?</h3>
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="manualTransmission"
+                              value="Yes"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Yes, I can drive
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                      <li>
-                        <label
-                          class="item-radio item-radio-icon-start item-content"
-                        >
-                          <input
-                            type="radio"
-                            name="manualTransmission"
-                            value="No"
-                            @input="updateInput"
-                          />
-                          <i class="icon icon-radio"></i>
-                          <div class="item-inner">
-                            <div class="item-title">
-                              Sorry, I can't drive
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="manualTransmission"
+                              value="No"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Sorry, I can't drive
+                              </div>
                             </div>
-                          </div>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -918,128 +922,130 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="row">
-                    <h2 class="col">Down Payment Available:</h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="0"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $0
+                  <div class="swiper-slide-content">
+                    <div class="row">
+                      <h3 class="col">Down Payment Available:</h3>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="0"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $0
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="500"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $500
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="500"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $500
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="1000"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $1000
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="1000"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $1000
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="1500"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $1500
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="1500"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $1500
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="2000"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $2000
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="2000"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $2000
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="2500"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $2500
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="2500"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $2500
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="3000"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $3000
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="3000"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $3000
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="downPayment"
-                        value="3000+"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $3000+
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="downPayment"
+                          value="3000+"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $3000+
+                          </div>
                         </div>
-                      </div>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -1058,130 +1064,132 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="row">
-                    <h2 class="col">
-                      What monthly payment can you afford for a vehicle?
-                    </h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="300"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $300
+                  <div class="swiper-slide-content">
+                    <div class="row">
+                      <h3 class="col">
+                        What monthly payment can you afford for a vehicle?
+                      </h3>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="300"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $300
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="350"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $350
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="350"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $350
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="400"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $400
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="400"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $400
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="450"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $450
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="450"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $450
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="500"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $500
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="500"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $500
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="600"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $600
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="600"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $600
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="700"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $700
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="700"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $700
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="monthlyPayment"
-                        value="700+"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $700+
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="monthlyPayment"
+                          value="700+"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $700+
+                          </div>
                         </div>
-                      </div>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -1200,130 +1208,132 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="row">
-                    <h2 class="col">
-                      What is the Maximum you can afford monthly?
-                    </h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="300"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $300
+                  <div class="swiper-slide-content">
+                    <div class="row">
+                      <h3 class="col">
+                        What is the Maximum you can afford monthly?
+                      </h3>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="300"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $300
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="350"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $350
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="350"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $350
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="400"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $400
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="400"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $400
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="450"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $450
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="450"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $450
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="500"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $500
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="500"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $500
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="600"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $600
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="600"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $600
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="700"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $700
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="700"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $700
+                          </div>
                         </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="maximumAfford"
-                        value="700+"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          $700+
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="maximumAfford"
+                          value="700+"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            $700+
+                          </div>
                         </div>
-                      </div>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -1341,86 +1351,494 @@
                     </button>
                   </div>
                 </div>
+
                 <div class="swiper-slide">
+                  <div class="swiper-slide-content">
+                    <div class="list no-hairlines-md">
+                      <h3 class="padding-left padding-right">
+                        Is a CO-SIGNOR available?
+                      </h3>
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="coSignor"
+                              value="Yes"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Yes, available
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="coSignor"
+                              value="No"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Not applicable
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- If Yes -->
+                    <div class="list no-hairlines-md">
+                      <ul>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">First Name</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="First name"
+                                name="coSignorFirstName"
+                                value="{{coSignorFirstName}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Last Name</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Last name"
+                                name="coSignorLastName"
+                                value="{{coSignorLastName}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Date of birth
+                            </div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="date"
+                                required
+                                validate
+                                placeholder="Date of birth"
+                                name="coSignorDateOfBirth"
+                                value="{{coSignorDateOfBirth}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Relationship:
+                            </div>
+                            <div class="item-input-wrap">
+                              <select
+                                required
+                                validate
+                                placeholder="Relationship"
+                                name="coSignorRelationship"
+                                value="{{coSignorRelationship}}"
+                                @input="updateInput"
+                              >
+                                <option value="" selected>Choose</option>
+                                <option value="Spouse">Spouse</option>
+                                <option value="Common-Law">Common-Law</option>
+                                <option value="Family">Family</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Co-Worker">Co-Worker</option>
+                                <option value="Other">Other</option>
+                              </select>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
                   <div class="row">
-                    <h2 class="col">
-                      Which Institution do you personally bank with?
-                    </h2>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                    <button
+                      class="col button button-fill button-round"
+                      @click="swiperPrev"
                     >
-                      <input
-                        type="radio"
-                        name="bank"
-                        value="Td"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          Td
-                        </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      Prev
+                    </button>
+
+                    <button
+                      class="col-50 button button-fill button-round"
+                      @click="swiperNext('coSignor, coSignorFirstName, coSignorLastName, coSignorRelationship, coSignorDateOfBirth, coSignorRelationship')"
                     >
-                      <input
-                        type="radio"
-                        name="bank"
-                        value="Rbc"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          Rbc
-                        </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="bank"
-                        value="Scotia"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          Scotia
-                        </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="bank"
-                        value="Cibc"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          Cibc
-                        </div>
-                      </div>
-                    </label>
-                    <label
-                      class="item-radio item-radio-icon-start item-radio-box item-content col-50"
-                    >
-                      <input
-                        type="radio"
-                        name="bank"
-                        value="Other"
-                        @input="updateInput"
-                      />
-                      <div class="item-inner text-align-center">
-                        <div class="font-weight-black text-color-deeporange">
-                          Other
-                        </div>
-                      </div>
-                    </label>
+                      Next
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-content">
+                    <div class="list no-hairlines-md">
+                      <h3 class="padding-left padding-right">
+                        Do you have a trade in?
+                      </h3>
+                      <ul>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="tradeIn"
+                              value="Yes"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                Yes, I have
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label
+                            class="item-radio item-radio-icon-start item-content"
+                          >
+                            <input
+                              type="radio"
+                              name="tradeIn"
+                              value="No"
+                              @input="updateInput"
+                            />
+                            <i class="icon icon-radio"></i>
+                            <div class="item-inner">
+                              <div class="item-title">
+                                I don't have any
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- If Yes -->
+                    <div class="list no-hairlines-md">
+                      <ul>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Year</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="date"
+                                required
+                                validate
+                                placeholder="Year"
+                                name="tradeInYear"
+                                value="{{tradeInYear}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Make</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Make"
+                                name="tradeInMake"
+                                value="{{tradeInMake}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Model</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Model"
+                                name="tradeInModel"
+                                value="{{tradeInModel}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Trim</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Trim"
+                                name="tradeInTrim"
+                                value="{{tradeInTrim}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Kilometers</div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Kilometers"
+                                name="tradeInKilometers"
+                                value="{{tradeInKilometers}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Exterior color
+                            </div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Exterior color"
+                                name="tradeInExteriorColor"
+                                value="{{tradeInExteriorColor}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Interior color
+                            </div>
+                            <div class="item-input-wrap">
+                              <input
+                                type="text"
+                                required
+                                validate
+                                placeholder="Interior color"
+                                name="tradeInInteriorColor"
+                                value="{{tradeInInteriorColor}}"
+                                @input="updateInput"
+                              />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Drivetrain:</div>
+                            <div class="item-input-wrap">
+                              <select
+                                required
+                                validate
+                                placeholder="Drivetrain"
+                                name="tradeInDrivetrain"
+                                value="{{tradeInDrivetrain}}"
+                                @input="updateInput"
+                              >
+                                <option value="" selected>Choose</option>
+                                <option value="Rear Wheel Drive"
+                                  >Rear Wheel Drive</option
+                                >
+                                <option value="Front Wheel Drive"
+                                  >Front Wheel Drive</option
+                                >
+                                <option value="All Wheel Drive"
+                                  >All Wheel Drive</option
+                                >
+                                <option value="4 Wheel Drive"
+                                  >4 Wheel Drive</option
+                                >
+                              </select>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Options:</div>
+                            <div class="item-input-wrap">
+                              <select
+                                required
+                                validate
+                                placeholder="Options"
+                                name="tradeInOptions"
+                                value="{{tradeInOptions}}"
+                                @input="updateInput"
+                              >
+                                <option value="" selected>Choose</option>
+                                <option value="Leather">Leather</option>
+                                <option value="Sunroof">Sunroof</option>
+                                <option value="Navigation">Navigation</option>
+                                <option value="DVD">DVD</option>
+                              </select>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">Accidents:</div>
+                            <div class="item-input-wrap">
+                              <select
+                                required
+                                validate
+                                placeholder="Accidents"
+                                name="tradeInAccidents"
+                                value="{{tradeInAccidents}}"
+                                @input="updateInput"
+                              >
+                                <option value="" selected>Choose</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3+">3+</option>
+                              </select>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Current Physical Damage:
+                            </div>
+                            <div class="display-flex margin-top-half">
+                              <label class="radio display-flex">
+                                <input
+                                  type="radio"
+                                  name="tradeInCurrentPhysicalDamge"
+                                  value="Yes"
+                                  @input="updateInput"
+                                />
+                                <i class="icon icon-radio"></i>
+                                <div style="padding-left: 0.25rem;">Yes</div>
+                              </label>
+                              <label class="radio display-flex margin-left">
+                                <input
+                                  type="radio"
+                                  name="tradeInCurrentPhysicalDamge"
+                                  value="No"
+                                  @input="updateInput"
+                                />
+                                <i class="icon icon-radio"></i>
+                                <div style="padding-left: 0.25rem;">No</div>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="item-content item-input item-input-with-info"
+                        >
+                          <div class="item-inner">
+                            <div class="item-title item-label">
+                              Lights showing on the Dash?
+                            </div>
+                            <div class="display-flex margin-top-half">
+                              <label class="radio display-flex">
+                                <input
+                                  type="radio"
+                                  name="tradeInLightsShowing"
+                                  value="Yes"
+                                  @input="updateInput"
+                                />
+                                <i class="icon icon-radio"></i>
+                                <div style="padding-left: 0.25rem;">Yes</div>
+                              </label>
+                              <label class="radio display-flex margin-left">
+                                <input
+                                  type="radio"
+                                  name="tradeInLightsShowing"
+                                  value="No"
+                                  @input="updateInput"
+                                />
+                                <i class="icon icon-radio"></i>
+                                <div style="padding-left: 0.25rem;">No</div>
+                              </label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="row">
                     <button
@@ -1432,7 +1850,7 @@
 
                     <button
                       class="col-50 button button-fill button-round"
-                      @click="swiperNext('bank')"
+                      @click="swiperNext('tradeIn, tradeInYear, tradeInMake, tradeInModel, tradeInTrim, tradeInKilometers, tradeInExteriorColor, tradeInInteriorColor, tradeInDrivetrain, tradeInOptions, tradeInAccidents, tradeInCurrentPhysicalDamge, tradeInLightsShowing')"
                     >
                       Next
                     </button>
@@ -1457,10 +1875,25 @@
         const swiper = this.$f7.views.main.app.swiper.get(".swiper-container");
         swiper.slidePrev();
       },
-      swiperNext(name) {
-        const swiper = this.$f7.views.main.app.swiper.get(".swiper-container");
-        if (!!this[name]) {
-          console.log({ [name]: this[name] });
+      swiperNext(dataKeys) {
+        if (!dataKeys) return;
+        const keys = dataKeys.split(",").map((key) => key.trim());
+
+        const data = {};
+        keys.forEach((key) => {
+          data[key] = this[key];
+        });
+
+        const isValid = !Object.values(data)
+          .map((value) => !!value)
+          .includes(false);
+
+        if (isValid) {
+          // Save data to Database
+          console.log(data);
+          const swiper = this.$f7.views.main.app.swiper.get(
+            ".swiper-container"
+          );
           swiper.slideNext();
         }
       },

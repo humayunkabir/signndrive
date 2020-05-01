@@ -1,0 +1,18 @@
+.snd-swiper {
+  height: calc(100vh - 208px);
+  overflow-y: auto;
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .swiper-pagination {
+    top: -7px;
+    bottom: auto;
+  }
+
+  .list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

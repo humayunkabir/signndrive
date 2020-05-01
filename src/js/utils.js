@@ -1,6 +1,6 @@
 export function updateInput({ target: { name, value, type, checked } }) {
   if (type === "checkbox" || type === "radio") {
-    this[name] = checked;
+    this[name] = value;
   } else {
     this[name] = value;
   }

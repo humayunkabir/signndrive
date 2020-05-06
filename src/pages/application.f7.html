@@ -520,99 +520,97 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-slide-content">
-                    <div class="list media-list no-hairlines-md padding-top">
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="serviceType"
-                              value="First Time Purchase"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                First Time Purchase
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="serviceType"
-                              value="Refinance My Auto"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Refinance My Auto
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="serviceType"
-                              value="Additional Auto"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Additional Auto
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="serviceType"
-                              value="Upgrade My Vehicle"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Upgrade My Vehicle
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="serviceType"
-                              value="Lower My Interest"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Lower My Interest
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                    <div class="row padding-top">
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="First Time Purchase"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            First Time Purchase
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="Refinance My Auto"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            Refinance My Auto
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="First Time Purchase"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            First Time Purchase
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="Additional Auto"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            Additional Auto
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="Upgrade My Vehicle"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            Upgrade My Vehicle
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        class="item-radio item-radio-icon-start item-radio-box item-content col-50"
+                      >
+                        <input
+                          type="radio"
+                          name="serviceType"
+                          value="Lower My Interest"
+                          @input="updateInput"
+                        />
+                        <div class="item-inner text-align-center">
+                          <div class="font-weight-black text-color-deeporange">
+                            Lower My Interest
+                          </div>
+                        </div>
+                      </label>
                     </div>
                   </div>
                   <div class="row">
@@ -635,44 +633,29 @@
                   <div class="swiper-slide-content">
                     <div class="list media-list no-hairlines-md">
                       <h3>Any previous repossession?</h3>
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="previousRepossession"
-                              value="Yes"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Yes
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="previousRepossession"
-                              value="No"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                No
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                      <div class="button-3d-group">
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input success"
+                            type="radio"
+                            name="previousRepossession"
+                            value="Yes"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">Yes</div>
+                        </label>
+
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input danger"
+                            type="radio"
+                            name="previousRepossession"
+                            value="No"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">No</div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -695,44 +678,29 @@
                   <div class="swiper-slide-content">
                     <div class="list media-list no-hairlines-md">
                       <h3>Do you have any collections?</h3>
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="collections"
-                              value="Yes"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Yes, I have collections
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="collections"
-                              value="No"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                I don't have any collections
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                      <div class="button-3d-group">
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input success"
+                            type="radio"
+                            name="collections"
+                            value="Yes"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">Yes</div>
+                        </label>
+
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input danger"
+                            type="radio"
+                            name="collections"
+                            value="No"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">No</div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -865,44 +833,29 @@
                   <div class="swiper-slide-content">
                     <div class="list media-list no-hairlines-md">
                       <h3>Can you drive Manual Transmission?</h3>
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="manualTransmission"
-                              value="Yes"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Yes, I can drive
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="manualTransmission"
-                              value="No"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Sorry, I can't drive
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                      <div class="button-3d-group">
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input success"
+                            type="radio"
+                            name="manualTransmission"
+                            value="Yes"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">Yes</div>
+                        </label>
+
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input danger"
+                            type="radio"
+                            name="manualTransmission"
+                            value="No"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">No</div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -1351,51 +1304,35 @@
                     </button>
                   </div>
                 </div>
-
                 <div class="swiper-slide">
                   <div class="swiper-slide-content">
                     <div class="list no-hairlines-md">
                       <h3 class="padding-left padding-right">
                         Is a CO-SIGNOR available?
                       </h3>
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="coSignor"
-                              value="Yes"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Yes, available
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="coSignor"
-                              value="No"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Not applicable
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                      <div class="button-3d-group">
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input success"
+                            type="radio"
+                            name="coSignor"
+                            value="Yes"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">Yes</div>
+                        </label>
+
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input danger"
+                            type="radio"
+                            name="coSignor"
+                            value="No"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">No</div>
+                        </label>
+                      </div>
                     </div>
 
                     <!-- If Yes -->
@@ -1514,44 +1451,29 @@
                       <h3 class="padding-left padding-right">
                         Do you have a trade in?
                       </h3>
-                      <ul>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="tradeIn"
-                              value="Yes"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                Yes, I have
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label
-                            class="item-radio item-radio-icon-start item-content"
-                          >
-                            <input
-                              type="radio"
-                              name="tradeIn"
-                              value="No"
-                              @input="updateInput"
-                            />
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">
-                                I don't have any
-                              </div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
+                      <div class="button-3d-group">
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input success"
+                            type="radio"
+                            name="tradeIn"
+                            value="Yes"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">Yes</div>
+                        </label>
+
+                        <label class="button-3d-wrapper">
+                          <input
+                            class="button-3d-input danger"
+                            type="radio"
+                            name="tradeIn"
+                            value="No"
+                            @input="updateInput"
+                          />
+                          <div class="button-3d">No</div>
+                        </label>
+                      </div>
                     </div>
 
                     <!-- If Yes -->
@@ -1782,26 +1704,27 @@
                             <div class="item-title item-label">
                               Current Physical Damage:
                             </div>
-                            <div class="display-flex margin-top-half">
-                              <label class="radio display-flex">
+                            <div class="button-3d-group">
+                              <label class="button-3d-wrapper">
                                 <input
+                                  class="button-3d-input success"
                                   type="radio"
                                   name="tradeInCurrentPhysicalDamge"
                                   value="Yes"
                                   @input="updateInput"
                                 />
-                                <i class="icon icon-radio"></i>
-                                <div style="padding-left: 0.25rem;">Yes</div>
+                                <div class="button-3d">Yes</div>
                               </label>
-                              <label class="radio display-flex margin-left">
+
+                              <label class="button-3d-wrapper">
                                 <input
+                                  class="button-3d-input danger"
                                   type="radio"
                                   name="tradeInCurrentPhysicalDamge"
                                   value="No"
                                   @input="updateInput"
                                 />
-                                <i class="icon icon-radio"></i>
-                                <div style="padding-left: 0.25rem;">No</div>
+                                <div class="button-3d">No</div>
                               </label>
                             </div>
                           </div>
@@ -1813,26 +1736,27 @@
                             <div class="item-title item-label">
                               Lights showing on the Dash?
                             </div>
-                            <div class="display-flex margin-top-half">
-                              <label class="radio display-flex">
+                            <div class="button-3d-group">
+                              <label class="button-3d-wrapper">
                                 <input
+                                  class="button-3d-input success"
                                   type="radio"
                                   name="tradeInLightsShowing"
                                   value="Yes"
                                   @input="updateInput"
                                 />
-                                <i class="icon icon-radio"></i>
-                                <div style="padding-left: 0.25rem;">Yes</div>
+                                <div class="button-3d">Yes</div>
                               </label>
-                              <label class="radio display-flex margin-left">
+
+                              <label class="button-3d-wrapper">
                                 <input
+                                  class="button-3d-input danger"
                                   type="radio"
                                   name="tradeInLightsShowing"
                                   value="No"
                                   @input="updateInput"
                                 />
-                                <i class="icon icon-radio"></i>
-                                <div style="padding-left: 0.25rem;">No</div>
+                                <div class="button-3d">No</div>
                               </label>
                             </div>
                           </div>

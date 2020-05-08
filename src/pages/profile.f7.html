@@ -36,12 +36,36 @@
     <div class="tabs-swipeable-wrap">
       <div class="tabs">
         <div id="tab-profile-basic" class="page-content tab tab-active">
-          <div class="block block-strong inset text-align-center">
-            <img src="static/img/pp.jpg" alt="profile" class="img-profile" />
-            <h2 class="block-title">
-              {{profileDetails.firstName}} {{profileDetails.lastName}}
+          <div class="profile-banner">
+            <div class="profile-img">
+              <img src="static/img/pp.jpg" alt="profile" />
+            </div>
+            <h2 class="profile-title">
+              {{title}} {{firstName}} {{lastName}}
             </h2>
-            <a href="tel:{{profileDetails.phone}}">{{profileDetails.phone}}</a>
+            <p class="profile-headline">{{position}} | {{company}}</p>
+
+            <div class="button-3d-group profile-social-button-group">
+              <div class="button-3d-wrapper">
+                <a href="tel:{{phone}}" class="button-3d">
+                  <i class="icon icon-fill f7-icons if-not-md"
+                    >phone_circle_fill</i
+                  >
+                  <i class="icon material-icons md-only">phone</i>
+                </a>
+              </div>
+              <div class="button-3d-wrapper">
+                <a href="email:{{email}}" class="button-3d">
+                  <i class="icon icon-fill f7-icons if-not-md">envelope_fill</i>
+                  <i class="icon material-icons md-only">email</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="profile-progressbar"></div>
+          <div class="block-title text-align-center margin-top-half">
+            Profile Completed
           </div>
         </div>
         <div id="tab-profile-address" class="page-content tab">
@@ -58,7 +82,7 @@
                   <h3>Employment details</h3>
                 </div>
                 <div class="accordion-item-content">
-                  Type: {{employmentDetails.type}}
+                  Type: {{type}}
                 </div>
               </div>
             </div> -->
@@ -69,26 +93,54 @@
   </div>
 </template>
 <script>
+  import ProgressBar from "progressbar.js";
+
   export default {
     data: function () {
-      const profileDetails = {
+      return {
         title: "Mr",
         firstName: "Humayun",
         lastName: "Kabir",
-        date_of_birth: new Date().toISOString,
+        dateOfBirth: new Date().toISOString,
+        email: "example@email.com",
         phone: "+88342342343235",
-      };
-      const employmentDetails = {
-        type: "Full time",
-        name_of_companey: "Google",
+        workType: "Full time",
+        company: "Google",
         position: "Software Engineer",
-        Phone: "+88011332534534",
-        gross_monthly_income: "$3428",
+        workPhone: "+88011332534534",
+        income: "$3428",
         duration: "May, 2015 to April, 2019",
       };
-
-      // Must return an object
-      return { profileDetails, employmentDetails };
+    },
+    mounted() {
+      const bar = new ProgressBar.Circle("#profile-progressbar", {
+        color: "#111",
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: "easeInOut",
+        duration: 1500,
+        text: {
+          autoStyleContainer: false,
+        },
+        from: { color: "#48c7f7", width: 1 },
+        to: { color: "#48c7f7", width: 4 },
+        // Set default step function for all animate calls
+        step: function (state, circle) {
+          circle.path.setAttribute("stroke", state.color);
+          circle.path.setAttribute("stroke-width", state.width);
+          var value = Math.round(circle.value() * 100);
+          if (value === 0) {
+            circle.setText("");
+          } else {
+            circle.setText(`
+              <span class="progressbar-circle-value">${value}%</span>
+            `);
+          }
+        },
+      });
+      bar.animate(0.87); // Number from 0.0 to 1.0
     },
   };
 </script>

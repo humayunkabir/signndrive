@@ -20,7 +20,7 @@
     mounted() {
       let isLoggedIn = true;
       let path = "/signin/";
-      if (isLoggedIn) path = "/application/";
+      if (isLoggedIn) path = "/profile/";
 
       setTimeout(() => {
         this.$f7.views.main.router.navigate(path);

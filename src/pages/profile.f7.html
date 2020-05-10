@@ -62,11 +62,6 @@
               </div>
             </div>
           </div>
-
-          <div id="profile-progressbar"></div>
-          <div class="block-title text-align-center margin-top-half">
-            Profile Completed
-          </div>
         </div>
         <div id="tab-profile-address" class="page-content tab">
           <div class="block block-strong inset">
@@ -76,16 +71,6 @@
         <div id="tab-profile-employment" class="page-content tab">
           <div class="block block-strong inset">
             <h3>Employment details</h3>
-            <!-- <div class="list accordion-list">
-              <div class="accordion-item accordion-item-opened">
-                <div class="accordion-item-toggle">
-                  <h3>Employment details</h3>
-                </div>
-                <div class="accordion-item-content">
-                  Type: {{type}}
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -93,8 +78,6 @@
   </div>
 </template>
 <script>
-  import ProgressBar from "progressbar.js";
-
   export default {
     data: function () {
       return {
@@ -113,34 +96,7 @@
       };
     },
     mounted() {
-      const bar = new ProgressBar.Circle("#profile-progressbar", {
-        color: "#111",
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: "easeInOut",
-        duration: 1500,
-        text: {
-          autoStyleContainer: false,
-        },
-        from: { color: "#48c7f7", width: 1 },
-        to: { color: "#48c7f7", width: 4 },
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-          circle.path.setAttribute("stroke", state.color);
-          circle.path.setAttribute("stroke-width", state.width);
-          var value = Math.round(circle.value() * 100);
-          if (value === 0) {
-            circle.setText("");
-          } else {
-            circle.setText(`
-              <span class="progressbar-circle-value">${value}%</span>
-            `);
-          }
-        },
-      });
-      bar.animate(0.87); // Number from 0.0 to 1.0
+      console.log("Mounted!");
     },
   };
 </script>

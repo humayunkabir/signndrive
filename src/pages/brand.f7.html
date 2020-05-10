@@ -15,12 +15,11 @@
   </div>
 </template>
 <script>
-  // import { goTo } from "../js/utils.js";
   export default {
     mounted() {
       let isLoggedIn = true;
       let path = "/signin/";
-      if (isLoggedIn) path = "/profile/";
+      if (isLoggedIn) path = "/home/";
 
       setTimeout(() => {
         this.$f7.views.main.router.navigate(path);

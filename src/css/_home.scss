@@ -1,0 +1,21 @@
+.status-check {
+  @include bg-img;
+  width: 176px;
+  height: 193px;
+  animation: statusAnimation 9s infinite ease-in-out;
+}
+
+@keyframes statusAnimation {
+  0% {
+    background-image: url("../static/img/status/status-success.png");
+  }
+  33% {
+    background-image: url("../static/img/status/status-pending.png");
+  }
+  66% {
+    background-image: url("../static/img/status/status-declined.png");
+  }
+  100% {
+    background-image: url("../static/img/status/status-success.png");
+  }
+}

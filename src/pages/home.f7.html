@@ -57,67 +57,96 @@
 
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="block block-strong inset">
-        <h3>
-          Welcome Mr. Bond, your Finance Manager will be Mr. Ash Alli. What
-          would you like to do today?
+      <div class="block block-strong inset margin-top-half text-align-center">
+        <h3 class="home-title">
+          <span class="home-title-name">
+            {{title}}. {{lastName}}
+          </span>
+          <br />
+          Welcome to Sign N Drive!
         </h3>
-        <div class="button-3d-group profile-social-button-group">
-          <div class="button-3d-wrapper">
-            <button class="button-3d">
-              <i class="icon icon-fill f7-icons if-not-md">arrow_up_doc_fill</i>
-              <i class="icon material-icons md-only">note_add</i>
-            </button>
-          </div>
-          <div class="button-3d-wrapper">
-            <button class="button-3d">
-              <i class="icon icon-fill f7-icons if-not-md"
-                >chat_bubble_2_fill</i
-              >
-              <i class="icon material-icons md-only">question_answer</i>
-            </button>
-          </div>
+
+        <div class="row">
+          <a class="col-50 home-card disabled" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md">question_circle</i>
+            <i class="icon material-icons md-only">help</i> -->
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/business_marketing_advertising_customer_survey_questionnaire-43-512.png"
+              alt="Questionnaire"
+              width="65"
+            />
+            Questionnaire
+          </a>
+
+          <a class="col-50 home-card" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md">calendar_circle</i>
+            <i class="icon material-icons md-only">event_available</i> -->
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/business_marketing_advertising_event_calendar-48-512.png"
+              alt="Appointment"
+              width="65"
+            />
+            Appointment
+          </a>
+
+          <a class="col-50 home-card" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md">car_fill</i>
+            <i class="icon material-icons md-only">directions_car</i> -->
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_control_management-512.png"
+              alt="Vehicle Selection"
+              width="65"
+            />
+            Vehicle Selection
+          </a>
+
+          <a class="col-50 home-card" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md">doc_on_doc</i>
+            <i class="icon material-icons md-only">account_balance</i> -->
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_file_document-512.png"
+              alt="Documents"
+              width="65"
+            />
+            Bank Documents
+          </a>
+
+          <a class="col-50 home-card" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md">gift</i>
+            <i class="icon material-icons md-only">local_shipping</i> -->
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/scenarium-vol-5/128/016_map_location_travel_navigation_city_street_road-512.png"
+              alt="Delivery/Pickup"
+              width="65"
+            />
+            Delivery/Pickup
+          </a>
+
+          <a class="col-50 home-card" href="#!">
+            <!-- <i class="icon icon-fill f7-icons if-not-md"
+              >checkmark_alt_circle</i
+            >
+            <i class="icon material-icons md-only">check_circle_outline</i> -->
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_clipboard-512.png"
+              alt="Review"
+              width="65"
+            />
+            Review
+          </a>
         </div>
-
-        <div class="status-check"></div>
-
-        <!-- <img
-          src="./static/img/undraw_by_my_car_ttge_brand.png"
-          alt="car"
-          width="100%"
-        /> -->
-        <!--<div class="preloader color-multi">
-          <span class="preloader-inner">
-            iOS
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            <span class="preloader-inner-line"></span>
-            MD
-            <span class="preloader-inner-gap"></span>
-            <span class="preloader-inner-left">
-              <span class="preloader-inner-half-circle"></span>
-            </span>
-            <span class="preloader-inner-right">
-              <span class="preloader-inner-half-circle"></span>
-            </span>
-          </span>
-          Aurora
-          <span class="preloader-inner-circle"></span>
-          </span>
-        </div>-->
       </div>
     </div>
   </div>
 </template>
 <script>
-  export default {};
+  export default {
+    data() {
+      return {
+        title: "Mr",
+        firstName: "James",
+        lastName: "Bond",
+      };
+    },
+  };
 </script>

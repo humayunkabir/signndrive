@@ -26,14 +26,15 @@
 
 /* Your app custom styles here */
 @import "variables";
+@import "functions";
 // @import "bootstrap";
+@import "profile";
+@import "home";
 @import "button";
 @import "flex";
 @import "swiper";
 @import "form";
 @import "background";
-@import "profile";
-@import "home";
 @import "miscellaneous";
 
 .block-strong {

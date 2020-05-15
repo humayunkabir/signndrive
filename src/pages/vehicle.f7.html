@@ -1,0 +1,193 @@
+<template>
+  <div class="page bg-img-2" data-name="vehicles">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Vehicle Selection</div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="block block-strong inset margin-top-half text-align-center">
+        <h3 class="home-title">
+          <span class="home-title-name">
+            {{title}}. {{lastName}}
+          </span>
+          <br />
+          Welcome to car selection.
+          <br />
+          Choose a <em>CAR</em> you like
+        </h3>
+
+        <div class="card rounded-snd margin-bottom">
+          <div class="card-header justify-content-center">
+            <h3 class="no-margin">2020 Explorer</h3>
+          </div>
+          <div class="card-content">
+            <div
+              data-speed="200"
+              data-space-between="10"
+              data-slides-per-view="auto"
+              data-centered-slides="true"
+              data-pagination='{"el": ".swiper-pagination"}'
+              class="swiper-container swiper-init card-prevent-open"
+            >
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="/static/img/vehicles/ford.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K8B..FT...53L.64E.CLO.99H.AWD.89N.%5D/EXT/1/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K7B..UM..887.BV.76P.55B.RVC.173.58S.RWD.99H.CLO.123.TFC.~VIRTUALPKGPART_FBFAB_18.~VIRTUALPKGPART_GTDAB_20.~VIRTUALPKGPART_HKCAA_21.~VIRTUALPKGPART_HLHAB_22.~VIRTUALPKGPART_HLLAC_23.~VIRTUALPKGPART_HLLAH_24.~VIRTUALPKGPART_J3KAB_26.44T.89N.64E.53L.2020%20K7B%20FORD.%5D/EXT/4/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="link font-weight-black">Confirm</a>
+            <a href="/vehicle/details/" class="link font-weight-black">
+              View details
+            </a>
+          </div>
+        </div>
+
+        <div class="card rounded-snd margin-bottom">
+          <div class="card-header justify-content-center">
+            <h3 class="no-margin">2020 Explorer XLT</h3>
+          </div>
+          <div class="card-content">
+            <div
+              data-speed="200"
+              data-space-between="10"
+              data-slides-per-view="auto"
+              data-centered-slides="true"
+              data-pagination='{"el": ".swiper-pagination"}'
+              class="swiper-container swiper-init card-prevent-open"
+            >
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/explorer/2020/collections/3-2/20_frd_epr_ps34_xlt_rcmc.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K8B..FT...53L.64E.CLO.99H.AWD.89N.%5D/EXT/1/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K7B..UM..887.BV.76P.55B.RVC.173.58S.RWD.99H.CLO.123.TFC.~VIRTUALPKGPART_FBFAB_18.~VIRTUALPKGPART_GTDAB_20.~VIRTUALPKGPART_HKCAA_21.~VIRTUALPKGPART_HLHAB_22.~VIRTUALPKGPART_HLLAC_23.~VIRTUALPKGPART_HLLAH_24.~VIRTUALPKGPART_J3KAB_26.44T.89N.64E.53L.2020%20K7B%20FORD.%5D/EXT/4/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="link font-weight-black">Confirm</a>
+            <a href="/vehicle/details/" class="link font-weight-black">
+              View details
+            </a>
+          </div>
+        </div>
+
+        <div class="card rounded-snd margin-bottom">
+          <div class="card-header justify-content-center">
+            <h3 class="no-margin">2020 Explorer Limited</h3>
+          </div>
+          <div class="card-content">
+            <div
+              data-speed="200"
+              data-space-between="10"
+              data-slides-per-view="auto"
+              data-centered-slides="true"
+              data-pagination='{"el": ".swiper-pagination"}'
+              class="swiper-container swiper-init card-prevent-open"
+            >
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/explorer/2020/collections/3-2/20_frd_epr_ps34_ltd_stwh.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K8B..FT...53L.64E.CLO.99H.AWD.89N.%5D/EXT/1/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K7B..UM..887.BV.76P.55B.RVC.173.58S.RWD.99H.CLO.123.TFC.~VIRTUALPKGPART_FBFAB_18.~VIRTUALPKGPART_GTDAB_20.~VIRTUALPKGPART_HKCAA_21.~VIRTUALPKGPART_HLHAB_22.~VIRTUALPKGPART_HLLAC_23.~VIRTUALPKGPART_HLLAH_24.~VIRTUALPKGPART_J3KAB_26.44T.89N.64E.53L.2020%20K7B%20FORD.%5D/EXT/4/vehicle.png"
+                    alt="Let's get started"
+                    width="200"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="link font-weight-black">Confirm</a>
+            <a href="/vehicle/details/" class="link font-weight-black">
+              View details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        title: "Mr",
+        firstName: "James",
+        lastName: "Bond",
+      };
+    },
+  };
+</script>

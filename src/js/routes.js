@@ -2,6 +2,8 @@ import HomePage from "../pages/home.f7.html";
 import AboutPage from "../pages/about.f7.html";
 import FormPage from "../pages/form.f7.html";
 import ProfilePage from "../pages/profile.f7.html";
+import VehiclePage from "../pages/vehicle.f7.html";
+import VehicleDetailsPage from "../pages/vehicle-details.f7.html";
 import SignInPage from "../pages/signin.f7.html";
 import SignUpPage from "../pages/signup.f7.html";
 import ExamplePage from "../pages/example.f7.html";
@@ -41,6 +43,14 @@ var routes = [
   {
     path: "/profile/",
     component: ProfilePage,
+  },
+  {
+    path: "/vehicle/",
+    component: VehiclePage,
+  },
+  {
+    path: "/vehicle/details/",
+    component: VehicleDetailsPage,
   },
   {
     path: "/dynamic-route/blog/:blogId/post/:postId/",

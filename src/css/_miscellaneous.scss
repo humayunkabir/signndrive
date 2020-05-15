@@ -2,6 +2,10 @@
   height: 100vh;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
 .p-0 {
   padding: 0;
 }
@@ -15,4 +19,15 @@
 
 .z-index-1 {
   z-index: 1;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--f7-card-outline-border-color);
+  margin-top: var(--f7-card-margin-vertical);
+  margin-bottom: var(--f7-card-margin-vertical);
+}
+
+.rounded-snd {
+  border-radius: 1rem;
 }

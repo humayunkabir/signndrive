@@ -1,0 +1,18 @@
+.snd-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: grayscale(0.25) blur(5px);
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 1rem;
+
+  margin-bottom: var(--f7-card-snd-margin-vertical);
+  box-shadow: var(--f7-button-raised-box-shadow);
+  padding: var(--f7-card-content-padding-vertical)
+    var(--f7-card-content-padding-horizontal);
+
+  .divider {
+    margin-left: calc(var(--f7-card-content-padding-horizontal) * -1);
+    margin-right: calc(var(--f7-card-content-padding-horizontal) * -1);
+  }
+}

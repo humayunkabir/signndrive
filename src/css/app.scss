@@ -22,6 +22,9 @@
 
   // List
   --f7-list-bg-color: transparent;
+
+  // SND
+  --f7-card-snd-margin-vertical: 1rem;
 }
 
 /* Your app custom styles here */
@@ -30,6 +33,7 @@
 // @import "bootstrap";
 @import "profile";
 @import "home";
+@import "card";
 @import "button";
 @import "flex";
 @import "swiper";

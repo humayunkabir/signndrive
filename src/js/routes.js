@@ -3,6 +3,7 @@ import AboutPage from "../pages/about.f7.html";
 import FormPage from "../pages/form.f7.html";
 import ProfilePage from "../pages/profile.f7.html";
 import ProfileManagerPage from "../pages/profile-manager.f7.html";
+import ForumPage from "../pages/forum.f7.html";
 import VehiclePage from "../pages/vehicle.f7.html";
 import VehicleDetailsPage from "../pages/vehicle-details.f7.html";
 import SignInPage from "../pages/signin.f7.html";
@@ -48,6 +49,10 @@ var routes = [
   {
     path: "/profile-manager/",
     component: ProfileManagerPage,
+  },
+  {
+    path: "/forum/",
+    component: ForumPage,
   },
   {
     path: "/vehicle/",

@@ -1,3 +1,28 @@
+.profile-img {
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  width: 7rem;
+  height: 7rem;
+}
+
+.profile-title {
+  margin-bottom: 0;
+}
+
+.profile-headline {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.profile-address {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .profile-banner {
   background-image: linear-gradient(-45deg, $color-primary-4, $color-primary-2);
   color: #fff;
@@ -9,17 +34,7 @@
     z-index: 1;
     display: block;
     background-color: #f7f7f7;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#f7f7f7),
-      to(#e7e7e7)
-    );
-    background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
-    background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
-    background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7);
-    background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+    background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
     color: #a7a7a7;
     margin: 2rem auto;
     width: 7rem;

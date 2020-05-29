@@ -1,0 +1,110 @@
+<template>
+  <div class="page bg-circle-shape-primary" data-name="signin">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Manager Profile</div>
+      </div>
+    </div>
+
+    <!-- FAB Backdrop -->
+    <div class="fab-backdrop"></div>
+
+    <!-- FAB Right Bottom -->
+    <div class="fab fab-right-bottom">
+      <a href="#">
+        <!-- Icons For iOS Theme -->
+        <i class="icon f7-icons if-not-md">question_circle_fill</i>
+        <i class="icon f7-icons if-not-md">question_circle_fill</i>
+        <!-- Icons For MD Theme -->
+        <i class="icon material-icons md-only">help</i>
+        <i class="icon material-icons md-only">help</i>
+      </a>
+      <div class="fab-buttons fab-buttons-top">
+        <a href="tel:{{phone}}" class="fab-label-button">
+          <span>
+            <i class="icon icon-fill f7-icons if-not-md">phone_circle_fill</i>
+            <i class="icon material-icons md-only">phone</i>
+          </span>
+          <span class="fab-label">{{phone}}</span>
+        </a>
+        <a href="email:{{email}}" class="fab-label-button">
+          <span>
+            <i class="icon icon-fill f7-icons if-not-md">envelope_fill</i>
+            <i class="icon material-icons md-only">email</i>
+          </span>
+          <span class="fab-label">{{email}}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="row">
+        <div
+          class="col-100 snd-card home-card block block-strong inset no-margin-bottom"
+        >
+          <img src="static/img/pp.jpg" alt="profile" class="profile-img" />
+
+          <h2 class="profile-title">
+            {{title}} {{firstName}} {{lastName}}
+          </h2>
+          <!-- <p class="profile-headline">{{position}} | {{company}}</p> -->
+          <address
+            class="profile-address padding-vertical-half margin-top-half"
+          >
+            4832 th Avenue, Hythe,
+            <br />
+            Alberta, T0H 2C0
+          </address>
+        </div>
+        <div
+          class="col-100 snd-card home-card block block-strong inset no-margin-bottom bg-gradient-1-1-5"
+        >
+          <h3 class="profile-title margin-top">Personal Message</h3>
+          <p class="fw-400 margin-bottom">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias
+            tempore ut voluptatum fugit laboriosam, quasi necessitatibus libero
+            aperiam repellat magni.
+          </p>
+        </div>
+        <a
+          class="col-100 button button-fill button-raised color-white text-color-black block block-strong inset margin-top"
+          href="#!"
+        >
+          Send Message
+          <!-- <i class="icon f7-icons if-not-md">paperplane_fill</i>
+          <i class="icon material-icons md-only">send</i> -->
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        title: "Mr",
+        firstName: "Humayun",
+        lastName: "Kabir",
+        dateOfBirth: new Date().toISOString,
+        email: "example@email.com",
+        phone: "+16045555555",
+        workType: "Full time",
+        company: "Sign N Drive",
+        position: "Manager",
+        workPhone: "+88011332534534",
+        income: "$3428",
+        duration: "May, 2015 to April, 2019",
+      };
+    },
+    mounted() {
+      console.log("Mounted!");
+    },
+  };
+</script>

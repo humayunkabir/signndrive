@@ -1,3 +1,30 @@
 .message-avatar {
   opacity: 1 !important;
 }
+
+.message {
+  margin: 0.8rem 2rem !important;
+
+  &.message-received .message-bubble::after {
+    left: -1rem;
+    transform: rotate(-20deg);
+    border-bottom: 20px solid var(--f7-message-received-bg-color);
+  }
+  &.message-sent .message-bubble::after {
+    right: -1rem;
+    transform: rotate(110deg);
+    border-bottom: 20px solid var(--f7-theme-color);
+  }
+}
+
+.message-bubble {
+  border-radius: 1rem;
+  padding: 1rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    bottom: 0.2rem;
+  }
+}

@@ -8,6 +8,7 @@ import ForumPage from "../pages/forum.f7.html";
 import VehiclePage from "../pages/vehicle.f7.html";
 import VehicleDetailsPage from "../pages/vehicle-details.f7.html";
 import SignInPage from "../pages/signin.f7.html";
+import PasswordChangePage from "../pages/password-change.f7.html";
 import SignUpPage from "../pages/signup.f7.html";
 import ExamplePage from "../pages/example.f7.html";
 import ApplicationPage from "../pages/application.f7.html";
@@ -34,6 +35,10 @@ var routes = [
   {
     path: "/signup/",
     component: SignUpPage,
+  },
+  {
+    path: "/password-change/",
+    component: PasswordChangePage,
   },
   {
     path: "/about/",

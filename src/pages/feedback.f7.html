@@ -1,0 +1,94 @@
+<template>
+  <div class="page bg-circle-shape-primary" data-name="feedback">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Feedback</div>
+      </div>
+    </div>
+    <div class="page-content display-flex align-items-center">
+      <div class="block block-strong inset flex-grow-1">
+        <div class="list no-hairlines-md no-margin-top">
+          <ul>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div id="review" style="font-size: 2.5rem;"></div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <textarea
+                    rows="8"
+                    name="feedback"
+                    placeholder="Write your feedback..."
+                    value="{{feedback}}"
+                    @input="updateInput"
+                  ></textarea>
+                </div>
+              </div>
+            </li>
+            <li>
+              <label class="item-checkbox item-content">
+                <input
+                  type="checkbox"
+                  name="accept"
+                  value="accept"
+                  value="{{accept}}"
+                  @input="updateInput"
+                />
+                <i class="icon icon-checkbox margin-right-half"></i>
+                <div class="item-inner">
+                  <small
+                    >This review can be posted on the company's social
+                    media</small
+                  >
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="block-footer">
+          <button
+            class="button button-fill button-round"
+            @click="submit('feedback, accept', '/home/', 'Feedback done!')"
+          >
+            Send feedback
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import { updateInput, submit, goTo } from "../js/utils.js";
+  export default {
+    data() {
+      return {
+        title: "Mr",
+        firstName: "James",
+        lastName: "Bond",
+      };
+    },
+    mounted() {
+      const { $ } = window;
+
+      /*-----------------------------------------------
+        |   Raty
+        -----------------------------------------------*/
+
+      $("#review").rating({
+        half: true,
+        color: "#ff6343",
+      });
+    },
+    methods: { updateInput, submit, goTo },
+  };
+</script>

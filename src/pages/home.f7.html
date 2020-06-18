@@ -1,5 +1,5 @@
 <template>
-  <div class="page bg-img-2" data-name="home">
+  <div class="page bg-circle-shape-primary" data-name="home">
     <!-- Top Navbar -->
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -15,10 +15,6 @@
           <a href="/home/" class="link">
             <img src="./static/img/snd-logo.png" alt="snd" width="40" />
           </a>
-          <!-- <a href="#" class="link icon-only panel-open" data-panel="right">
-            <i class="icon f7-icons if-not-md">menu</i>
-            <i class="icon material-icons if-md">menu</i>
-          </a> -->
         </div>
       </div>
     </div>
@@ -31,131 +27,122 @@
           <i class="icon material-icons md-only">home</i>
           <span class="tabbar-label">Home</span></a
         >
-        <!-- <a href="/notification/" class="link">
-          <i class="icon icon-fill f7-icons if-not-md">
-            bell
-            <span class="badge color-red">5</span>
-          </i>
-          <i class="icon material-icons md-only">
-            add_alert
-            <span class="badge color-red">5</span>
-          </i>
-          <span class="tabbar-label">Notification</span>
-        </a> -->
-        <a href="/application/" class="link">
-          <i class="icon icon-fill f7-icons if-not-md">doc_richtext</i>
-          <i class="icon material-icons md-only">assignment</i>
-          <span class="tabbar-label">Application</span>
+        <a href="/profile-manager/" class="link">
+          <i class="icon icon-fill f7-icons if-not-md">person_2</i>
+          <i class="icon material-icons md-only">people_outline</i>
+          <span class="tabbar-label">Finance Manager</span>
         </a>
-        <a href="/profile/" class="link">
-          <i class="icon icon-fill f7-icons if-not-md">person_alt_circle</i>
-          <i class="icon material-icons md-only">person_alt_circle</i>
-          <span class="tabbar-label">Profile</span>
+        <a href="/forum/" class="link">
+          <i class="icon icon-fill f7-icons if-not-md">chat_bubble</i>
+          <i class="icon material-icons md-only">chat_bubble_outline</i>
+          <span class="tabbar-label">Message</span>
         </a>
       </div>
     </div>
 
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="block block-strong inset margin-top-half text-align-center">
-        <h3 class="home-title">
-          <span class="home-title-name">
-            {{title}}. {{lastName}}
-          </span>
-          <br />
-          Welcome to Sign N Drive!
-        </h3>
-
-        <div class="row">
-          <!-- Getting started -->
-          <div class="col-100 snd-card home-card">
+      <div class="row justify-content-center">
+        <a class="col-100" href="/application/">
+          <div class="btn-start-application">
             <img
-              class="margin-top"
-              src="/static/img/vehicles/ford.png"
-              alt="Let's get started"
-              width="200"
+              src="/static/img/home/phone.png"
+              alt="Application"
+              class="img-phone"
             />
-            <a
-              class="button button-raised button-fill button-round color-theme-blue margin-vertical margin-horizontal"
-              href="/application/"
-            >
-              Let's get started
-            </a>
+            <img
+              src="/static/img/home/car.png"
+              alt="Application"
+              class="img-car"
+            />
           </div>
-
-          <!-- After application done -->
-          <div class="col-100 snd-card home-card">
-            <img
-              class="margin-top"
-              src="https://cdn2.iconfinder.com/data/icons/scenarium-vol-1-2/128/021_team_work_contacts_social_friends_messages_workplace-512.png"
-              alt="Manager"
-              width="150"
-            />
-            <a
-              class="button button-raised button-fill button-round color-theme-blue margin-vertical margin-horizontal"
-              href="/profile-manager/"
-            >
-              Manager's profile
-            </a>
+          <div class="btn-home">
+            Start Application
           </div>
+        </a>
 
-          <a class="col-50 snd-card home-card" href="#!">
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/business_marketing_advertising_customer_survey_questionnaire-43-512.png"
-              alt="Questionnaire"
-              width="65"
-            />
-            Questionnaire
+        <div class="col-100 loan-status">
+          <a class="btn-home" href="#!">
+            <div
+              class="preloader color-blue margin-right"
+              style="width: 44px; height: 44px;"
+            ></div>
+
+            Loan Status
           </a>
+        </div>
 
-          <a class="col-50 snd-card home-card" href="#!">
-            <span class="ripple"></span>
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/business_marketing_advertising_event_calendar-48-512.png"
-              alt="Appointment"
-              width="65"
-            />
-            Appointment
-          </a>
+        <a class="col-33 home-img-card" href="/application/">
+          <img
+            src="/static/img/home/application.png"
+            alt="Application"
+            class="img-fluid"
+          />
+        </a>
 
-          <a class="col-50 snd-card home-card" href="/vehicle/">
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_control_management-512.png"
-              alt="Vehicle Selection"
-              width="65"
-            />
-            Vehicle Selection
-          </a>
+        <a
+          class="col-33 home-img-card"
+          href="/application/tab-application-question-answer"
+        >
+          <img
+            src="/static/img/home/questionaire.png"
+            alt="Questionnaire"
+            class="img-fluid"
+          />
+        </a>
 
-          <a class="col-50 snd-card home-card" href="#!">
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_file_document-512.png"
-              alt="Documents"
-              width="65"
-            />
-            Bank Documents
-          </a>
+        <a class="col-33 home-img-card position-relative" href="#!">
+          <span class="ripple"></span>
+          <img
+            src="/static/img/home/appointment.png"
+            alt="Appointment"
+            class="img-fluid"
+          />
+        </a>
 
-          <a class="col-50 snd-card home-card" href="#!">
-            <img
-              src="https://cdn2.iconfinder.com/data/icons/scenarium-vol-5/128/016_map_location_travel_navigation_city_street_road-512.png"
-              alt="Delivery/Pickup"
-              width="65"
-            />
-            Delivery/Pickup
-          </a>
+        <a class="col-33 home-img-card" href="#!">
+          <img
+            src="/static/img/home/documents.png"
+            alt="Upload documents"
+            class="img-fluid"
+          />
+        </a>
 
-          <a class="col-50 snd-card home-card" href="#!">
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/web_clipboard-512.png"
-              alt="Review"
-              width="65"
-            />
-            Review
-          </a>
+        <a class="col-33 home-img-card" href="/vehicle/">
+          <img
+            src="/static/img/home/vehicle-selection.png"
+            alt="Vehicle Selection"
+            class="img-fluid"
+          />
+        </a>
 
-          <!-- Show always this counter -->
-          <div class="col-100 snd-card home-card color-theme-gray">
+        <a class="col-33 home-img-card" href="#!">
+          <img
+            src="/static/img/home/bank-documents.png"
+            alt="Documents"
+            class="img-fluid"
+          />
+        </a>
+
+        <a class="col-33 home-img-card" href="#!">
+          <img
+            src="/static/img/home/delivery.png"
+            alt="Delivery/Pickup"
+            class="img-fluid"
+          />
+        </a>
+
+        <a class="col-33 home-img-card" href="#!">
+          <img
+            src="/static/img/home/reviews.png"
+            alt="Review"
+            class="img-fluid"
+          />
+        </a>
+
+        <!-- Show always this counter -->
+        <div class="col-100" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="btn-home">
             Application approved today: 144
           </div>
         </div>

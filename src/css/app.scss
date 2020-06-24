@@ -76,3 +76,18 @@
 .color-raty-gray {
   color: #ddd;
 }
+
+.page {
+  @include bg-img;
+  background-image: url("../static/img/bg.png");
+}
+
+.left-navbar {
+  a {
+    color: #fff !important;
+
+    .item-inner::before {
+      color: #fff !important;
+    }
+  }
+}

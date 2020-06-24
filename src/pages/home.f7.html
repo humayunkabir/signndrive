@@ -1,5 +1,5 @@
 <template>
-  <div class="page bg-circle-shape-primary" data-name="home">
+  <div class="page" data-name="home">
     <!-- Top Navbar -->
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -67,6 +67,15 @@
               class="preloader color-blue margin-right"
               style="width: 44px; height: 44px;"
             ></div>
+
+            <!-- <div
+              class="gauge gauge-init my-gauge"
+              data-type="circle"
+              data-value="0.44"
+              data-value-text="44%"
+              data-value-text-color="#ff9800"
+              data-border-color="#ff9800"
+            ></div> -->
 
             Loan Status
           </a>
@@ -158,6 +167,12 @@
         firstName: "James",
         lastName: "Bond",
       };
+    },
+    mounted() {
+      // const gauge = this.$f7.gauge.get(".my-gauge");
+      // gauge.update({
+      //   value: 0.9,
+      // });
     },
   };
 </script>

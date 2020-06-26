@@ -19,7 +19,7 @@
     mounted() {
       let isLoggedIn = true;
       let path = "/signin/";
-      if (isLoggedIn) path = "/home/";
+      if (isLoggedIn) path = "/application/tab-application-question-answer";
 
       setTimeout(() => {
         this.$f7.views.main.router.navigate(path);

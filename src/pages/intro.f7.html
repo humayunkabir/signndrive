@@ -1,0 +1,125 @@
+<template>
+  <div class="page" data-name="intro">
+    <!-- <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Intro</div>
+      </div>
+    </div> -->
+    <div class="page-content display-flex align-items-center">
+      <div class="block block-strong inset flex-grow-1">
+        <!-- Slider container -->
+        <div
+          data-speed="200"
+          data-space-between="10"
+          data-slides-per-view="auto"
+          data-centered-slides="true"
+          data-pagination='{"el": ".swiper-pagination"}'
+          class="swiper-container swiper-init"
+        >
+          <!-- Slides wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <h2>Welcome to Sign N Drive!</h2>
+              <hr />
+
+              <div class="list media-list inset">
+                <ul>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="static/img/intro/vt1.png" width="44" />
+                      </div>
+                      <div class="item-inner align-items-center">
+                        <div class="item-title-row">
+                          <div class="item-title">Apply Online</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="static/img/intro/vt2.png" width="44" />
+                      </div>
+                      <div class="item-inner align-items-center">
+                        <div class="item-title-row">
+                          <div class="item-title">Choose Your Vehicle</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="static/img/intro/vt3.png" width="44" />
+                      </div>
+                      <div class="item-inner align-items-center">
+                        <div class="item-title-row">
+                          <div class="item-title">Sign Online</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="static/img/intro/vt4.png" width="44" />
+                      </div>
+                      <div class="item-inner align-items-center">
+                        <div class="item-title-row">
+                          <div class="item-title">We Deliver to You</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="static/img/intro/screen-2.png"
+                alt="screen"
+                width="100%"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="static/img/intro/screen-3.png"
+                alt="screen"
+                width="100%"
+              />
+            </div>
+            <div class="swiper-slide">
+              <a href="/home/">Let's get started</a>
+            </div>
+          </div>
+          <!-- Pagination, if required -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    // methods: {
+    //   swiper() {
+    //     return this.$f7.views.main.app.swiper.get(".swiper-container");
+    //   },
+    //   swiperPrev() {
+    //     this.swiper().slidePrev();
+    //   },
+    //   swiperNext() {
+    //     this.swiper().slideNext();
+    //   },
+    // },
+  };
+</script>

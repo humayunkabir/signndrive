@@ -1,4 +1,5 @@
 import HomePage from "../pages/home.f7.html";
+import IntroPage from "../pages/intro.f7.html";
 import AboutPage from "../pages/about.f7.html";
 import FeedbackPage from "../pages/feedback.f7.html";
 import FaqPage from "../pages/faq.f7.html";
@@ -28,6 +29,10 @@ var routes = [
   {
     path: "/home/",
     component: HomePage,
+  },
+  {
+    path: "/intro/",
+    component: IntroPage,
   },
   {
     path: "/signin/",

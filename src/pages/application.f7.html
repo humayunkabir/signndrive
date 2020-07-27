@@ -1831,19 +1831,19 @@
   </div>
 </template>
 <script>
-  import { updateInput, submit, goTo } from "../js/utils.js";
+  import { updateInput, submit, goTo } from '../js/utils.js';
   export default {
     methods: {
       updateInput,
       submit,
       goTo,
       swiperPrev() {
-        const swiper = this.$f7.views.main.app.swiper.get(".swiper-container");
+        const swiper = this.$f7.views.main.app.swiper.get('.swiper-container');
         swiper.slidePrev();
       },
       swiperNext(dataKeys) {
         if (!dataKeys) return;
-        const keys = dataKeys.split(",").map((key) => key.trim());
+        const keys = dataKeys.split(',').map((key) => key.trim());
 
         const data = {};
         keys.forEach((key) => {
@@ -1858,7 +1858,7 @@
           // Save data to Database
           console.log(data);
           const swiper = this.$f7.views.main.app.swiper.get(
-            ".swiper-container"
+            '.swiper-container'
           );
           swiper.slideNext();
         }

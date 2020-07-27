@@ -18,8 +18,8 @@
   export default {
     mounted() {
       let isLoggedIn = true;
-      let path = "/signin/";
-      if (isLoggedIn) path = "/intro/";
+      let path = '/signin/';
+      if (isLoggedIn) path = '/intro/';
 
       setTimeout(() => {
         this.$f7.views.main.router.navigate(path);

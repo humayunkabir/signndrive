@@ -8,6 +8,7 @@ import ProfilePage from "../pages/profile.f7.html";
 import ProfileManagerPage from "../pages/profile-manager.f7.html";
 import ForumPage from "../pages/forum.f7.html";
 import VehiclePage from "../pages/vehicle.f7.html";
+import VehicleInventoryPage from "../pages/vehicle-inventory.f7.html";
 import VehicleDetailsPage from "../pages/vehicle-details.f7.html";
 import SignInPage from "../pages/signin.f7.html";
 import PasswordChangePage from "../pages/password-change.f7.html";
@@ -77,6 +78,10 @@ var routes = [
   {
     path: "/vehicle/",
     component: VehiclePage,
+  },
+  {
+    path: "/vehicle-inventory/",
+    component: VehicleInventoryPage,
   },
   {
     path: "/vehicle/details/",

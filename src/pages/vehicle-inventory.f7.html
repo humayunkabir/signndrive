@@ -1,0 +1,163 @@
+<template>
+  <div class="page bg-img-2" data-name="vehicles">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Vehicle Inventory</div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="block block-strong inset margin-top-half text-align-center">
+        <h3 class="home-title">
+          <span class="home-title-name">
+            {{title}}. {{lastName}}
+          </span>
+          <br />
+          Welcome to car inventory.
+          <br />
+          Choose a <em>CAR</em> you like
+        </h3>
+        <div class="row margin-bottom text-left">
+          <div class="col-50 margin-vertical-half">
+            <label style="font-weight: 700" for="caryear">Year</label>
+            <select name="year" id="caryear"
+              style="border: 1px solid rgba(0, 0, 0, 0.25); width: 100%; padding: 15px; border-radius: 4px;">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+          <div class="col-50 margin-vertical-half">
+            <label style="font-weight: 700" for="carmake">Make</label>
+            <select name="make" id="carmake"
+              style="border: 1px solid rgba(0, 0, 0, 0.25); width: 100%; padding: 15px; border-radius: 4px;">
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+              <option value="e">e</option>
+              <option value="f">f</option>
+              <option value="g">g</option>
+            </select>
+          </div>
+          <div class="col-50 margin-vertical-half">
+            <label style="font-weight: 700" for="carmodel">Model</label>
+            <select name="model" id="carmodel"
+              style="border: 1px solid rgba(0, 0, 0, 0.25); width: 100%; padding: 15px; border-radius: 4px;">
+              <option value="model-1">model-1</option>
+              <option value="model-2">model-2</option>
+              <option value="model-3">model-3</option>
+              <option value="model-4">model-4</option>
+              <option value="model-5">model-5</option>
+            </select>
+          </div>
+          <div class="col-50 margin-vertical-half">
+            <label style="font-weight: 700" for="carcolor">Color</label>
+            <select name="color" id="carcolor"
+              style="border: 1px solid rgba(0, 0, 0, 0.25); width: 100%; padding: 15px; border-radius: 4px;">
+              <option value="color-1">color-1</option>
+              <option value="color-2">color-2</option>
+              <option value="color-3">color-3</option>
+              <option value="color-4">color-4</option>
+              <option value="color-5">color-5</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-50 snd-card bg-gradient-1-3-1-5">
+            <label class="checkbox">
+              <input type="checkbox">
+              <i class="icon-checkbox"></i>
+            </label>
+            <br />
+            <a href="/vehicle/details/">2020 Explorer Limited</a>
+
+            <div class="divider"></div>
+            <div data-speed="200" data-space-between="10" data-slides-per-view="auto" data-centered-slides="true"
+              data-pagination='{"el": ".swiper-pagination"}' class="swiper-container swiper-init card-prevent-open">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/explorer/2020/collections/3-2/20_frd_epr_ps34_xlt_rcmc.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg"
+                    alt="Let's get started" width="100" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K8B..FT...53L.64E.CLO.99H.AWD.89N.%5D/EXT/1/vehicle.png"
+                    alt="Let's get started" width="100" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K7B..UM..887.BV.76P.55B.RVC.173.58S.RWD.99H.CLO.123.TFC.~VIRTUALPKGPART_FBFAB_18.~VIRTUALPKGPART_GTDAB_20.~VIRTUALPKGPART_HKCAA_21.~VIRTUALPKGPART_HLHAB_22.~VIRTUALPKGPART_HLLAC_23.~VIRTUALPKGPART_HLLAH_24.~VIRTUALPKGPART_J3KAB_26.44T.89N.64E.53L.2020%20K7B%20FORD.%5D/EXT/4/vehicle.png"
+                    alt="Let's get started" width="100" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50 snd-card bg-gradient-1-3-1-5">
+            <label class="checkbox">
+              <input type="checkbox">
+              <i class="icon-checkbox"></i>
+            </label>
+            <br />
+            <a href="/vehicle/details/">2020 Explorer Limited</a>
+
+            <div class="divider"></div>
+            <div data-speed="200" data-space-between="10" data-slides-per-view="auto" data-centered-slides="true"
+              data-pagination='{"el": ".swiper-pagination"}' class="swiper-container swiper-init card-prevent-open">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://www.ford.com/cmslibs/content/dam/vdm_ford/live/en_us/ford/nameplate/explorer/2020/collections/3-2/20_frd_epr_ps34_ltd_stwh.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg"
+                    alt="Let's get started" width="100" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K8B..FT...53L.64E.CLO.99H.AWD.89N.%5D/EXT/1/vehicle.png"
+                    alt="Let's get started" width="100" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="margin-vertical"
+                    src="https://build.ford.com/dig/Ford/Explorer/2020/HD-TILE/Image%5B%7CFord%7CExplorer%7C2020%7C1%7C1.%7C100A.K7B..UM..887.BV.76P.55B.RVC.173.58S.RWD.99H.CLO.123.TFC.~VIRTUALPKGPART_FBFAB_18.~VIRTUALPKGPART_GTDAB_20.~VIRTUALPKGPART_HKCAA_21.~VIRTUALPKGPART_HLHAB_22.~VIRTUALPKGPART_HLLAC_23.~VIRTUALPKGPART_HLLAH_24.~VIRTUALPKGPART_J3KAB_26.44T.89N.64E.53L.2020%20K7B%20FORD.%5D/EXT/4/vehicle.png"
+                    alt="Let's get started" width="100" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="col-100 button button-fill">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        title: "Mr",
+        firstName: "James",
+        lastName: "Bond",
+        year: null,
+        make: null,
+        model: null,
+        color: null,
+      };
+    },
+  };
+</script>
